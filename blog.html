@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering &amp; Research Notes | Urmi Urma Snigdha</title>
+    <meta name="description" content="Technical articles, deep dives, and research notes across Generative AI, Transformers, RAG, Computer Vision, and Distributed Systems by Urmi Urma Snigdha." />
+    
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        if (theme === 'light') {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Liquid Glass Navigation Capsule -->
+    <div class="header-wrapper">
+      <header class="liquid-nav-capsule">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-brand-avatar">
+            <img src="assets/photos/urmi-portrait.jpg" alt="Urmi Urma Snigdha" />
+          </div>
+          <span>Urmi Snigdha</span>
+        </a>
+
+        <div class="nav-actions">
+          <a href="index.html" class="btn btn-secondary btn-small">
+            <span>&#8592; Back to Portfolio</span>
+          </a>
+          <a href="cv.html" class="btn btn-secondary btn-small">
+            <span>📄 View CV</span>
+          </a>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <main style="padding-top:calc(var(--header-height) + 4rem);padding-bottom:6rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineering &amp; Research Notes</span>
+          <h1 class="section-title">Technical Articles &amp; Insights</h1>
+          <p class="section-subtitle">Deep dives, architectural breakdowns, and implementation lessons across Generative AI, Computer Vision, and scalable distributed systems.</p>
+        </div>
+
+        <!-- Search Bar with Search Button -->
+        <div class="blog-search-bar-wrap">
+          <div class="blog-search-input-wrap">
+            <span class="blog-search-icon">🔍</span>
+            <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Search by topic or keyword (e.g. Transformers, RAG, YOLO, PyTorch)..." />
+          </div>
+          <button id="blog-search-btn" class="search-action-btn">Search</button>
+        </div>
+
+        <!-- Active Search Status Feedback -->
+        <div id="search-status-bar" class="search-status-bar">
+          <span id="search-status-text">Showing results for: ""</span>
+          <button id="search-clear-btn" class="search-clear-btn">✕ Clear</button>
+        </div>
+
+        <!-- Tags Bar (No Hash Tags) -->
+        <div id="blog-tags-bar" class="filters-bar"></div>
+
+        <!-- Featured Article -->
+        <div id="blog-featured-wrap"></div>
+
+        <!-- Grid of All Articles -->
+        <h3 style="font-size:1.45rem;font-weight:700;color:var(--text-highlight);margin-bottom:1.5rem;">All Articles</h3>
+        <div id="blog-grid" class="blog-grid-articles"></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p style="color:var(--text-dim);font-size:0.88rem;">
+          &copy; 2026 <strong style="color:var(--text-highlight);">Urmi Urma Snigdha</strong>. Engineering &amp; Research Notes.
+        </p>
+        <div>
+          <a href="index.html" style="color:var(--accent-cyan);font-size:0.88rem;">Portfolio Home &#8594;</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Universal Modal Overlay -->
+    <div id="global-modal-overlay" class="modal-overlay"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

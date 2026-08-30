@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae | Urmi Urma Snigdha</title>
+    <meta name="description" content="Official Curriculum Vitae of Urmi Urma Snigdha - UI/UX Designer, AI & Data Science Researcher, and Graphic Designer." />
+    
+    <!-- Theme Auto-Detect Script -->
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        if (theme === 'light') {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- html2pdf.js for 1-click true PDF download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+      @media print {
+        .header-wrapper, .cv-download-bar, .site-footer {
+          display: none !important;
+        }
+        body {
+          background: #ffffff !important;
+          color: #000000 !important;
+        }
+        .cv-paper-container {
+          box-shadow: none !important;
+          border: none !important;
+          background: #ffffff !important;
+          color: #000000 !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+        }
+        .cv-header-photo {
+          border: 2px solid #000000 !important;
+        }
+        h1, h2, h3, h4, h5, p, span, div {
+          color: #000000 !important;
+          -webkit-text-fill-color: #000000 !important;
+        }
+        .section-tag, .cv-badge, .cv-skill-pill {
+          background: #f0f0f0 !important;
+          border: 1px solid #cccccc !important;
+          color: #000000 !important;
+        }
+      }
+
+      .cv-paper-container {
+        max-width: 920px;
+        margin: 0 auto;
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 3.5rem 3rem;
+        box-shadow: var(--shadow-card), var(--shadow-glow);
+        backdrop-filter: blur(15px);
+      }
+
+      .cv-top-grid {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--border-subtle);
+        margin-bottom: 2rem;
+      }
+
+      .cv-header-photo-wrap {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        padding: 3px;
+        background: var(--gradient-brand);
+        box-shadow: 0 0 25px rgba(6, 182, 212, 0.35);
+      }
+
+      .cv-header-photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .cv-title-main {
+        font-size: 2.25rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.25rem;
+        color: var(--text-highlight);
+      }
+
+      .cv-subtitle-role {
+        font-size: 1.05rem;
+        color: var(--accent-cyan);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .cv-contacts-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      .cv-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .cv-sec-title {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--accent-violet);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 1px dashed var(--border-subtle);
+        padding-bottom: 0.5rem;
+      }
+
+      .cv-entry-card {
+        margin-bottom: 1.5rem;
+      }
+
+      .cv-entry-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.25rem;
+      }
+
+      .cv-entry-heading {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text-highlight);
+      }
+
+      .cv-entry-date {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-dim);
+      }
+
+      .cv-entry-sub {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--accent-cyan);
+        margin-bottom: 0.4rem;
+      }
+
+      .cv-entry-bullets {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        padding-left: 1.2rem;
+      }
+
+      .cv-entry-bullets li {
+        margin-bottom: 0.35rem;
+      }
+
+      .cv-skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .cv-skill-group-title {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text-highlight);
+        margin-bottom: 0.6rem;
+      }
+
+      .cv-skill-pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .cv-skill-pill {
+        font-size: 0.78rem;
+        font-family: var(--font-mono);
+        padding: 0.25rem 0.65rem;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-main);
+      }
+
+      .cv-download-bar {
+        position: sticky;
+        top: 5.5rem;
+        z-index: 90;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-nav);
+        backdrop-filter: blur(15px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-full);
+        padding: 0.6rem 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-card);
+      }
+
+      @media (max-width: 768px) {
+        .cv-top-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+          justify-items: center;
+        }
+        .cv-contacts-row {
+          justify-content: center;
+        }
+        .cv-skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .cv-paper-container {
+          padding: 2rem 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Liquid Glass Navigation Capsule -->
+    <div class="header-wrapper">
+      <header class="liquid-nav-capsule">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-brand-avatar">
+            <img src="assets/photos/urmi-portrait.jpg" alt="Urmi Urma Snigdha" />
+          </div>
+          <span>Urmi Snigdha</span>
+        </a>
+
+        <div class="nav-actions">
+          <a href="index.html" class="btn btn-secondary btn-small">
+            <span>&#8592; Back to Portfolio</span>
+          </a>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <main style="padding-top:calc(var(--header-height) + 2rem);padding-bottom:5rem;">
+      <div class="container">
+        
+        <!-- Sticky Action / Download Bar -->
+        <div class="cv-download-bar">
+          <div style="font-weight:700;font-size:0.95rem;color:var(--text-highlight);display:flex;align-items:center;gap:0.5rem;">
+            <span>📄 Official Curriculum Vitae</span>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button id="download-pdf-btn" class="btn btn-gradient btn-small">
+              <span>📥 Download CV (PDF)</span>
+            </button>
+            <a href="index.html#contact" class="btn btn-secondary btn-small">
+              <span>Hire / Contact ✉</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Printable & Downloadable CV Paper Container -->
+        <div id="cv-content-to-export" class="cv-paper-container">
+          
+          <!-- Header with Picture & Contact Info -->
+          <div class="cv-top-grid">
+            <div class="cv-header-photo-wrap">
+              <img src="assets/photos/urmi-portrait.jpg" alt="Urmi Urma Snigdha" class="cv-header-photo" />
+            </div>
+            <div>
+              <h1 class="cv-title-main">URMI URMA SNIGDHA</h1>
+              <div class="cv-subtitle-role">UI/UX Designer · Researcher · Graphic Designer · CSE (Data Science)</div>
+              <div class="cv-contacts-row">
+                <div class="cv-contact-item">📧 <a href="mailto:urmiurmasnigdha@gmail.com" style="color:inherit;">urmiurmasnigdha@gmail.com</a></div>
+                <div class="cv-contact-item">📱 <span>01643-844521</span></div>
+                <div class="cv-contact-item">🔗 <a href="https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-violet);">LinkedIn</a></div>
+                <div class="cv-contact-item">🎨 <a href="https://www.behance.net/urmisnigdha" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan);">Behance</a></div>
+                <div class="cv-contact-item">💻 <a href="https://github.com/urmiurmasnigdha" target="_blank" rel="noopener noreferrer" style="color:var(--accent-fuchsia);">GitHub</a></div>
+                <div class="cv-contact-item">📍 <span>Mohammadpur, Dhaka, Bangladesh</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">🎯 Professional Summary</h2>
+            <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.75;">
+              Creative and analytically driven Computer Science &amp; Engineering student (Data Science specialization) at United International University, combining a strong UI/UX and graphic design background with active academic research. Proficient in Figma, Adobe Illustrator, and Photoshop for end-to-end product design. Currently pursuing research publications in green computing (AI safety guardrail energy overhead) and cross-lingual NLP (multilingual LLM benchmarking for NLI/stance detection). Awarded Global Design Contest Winner on Freelancer.com and multiple UIU departmental competition titles. Holds certifications from Google, Meta, and Coursera. Seeking internships and collaborative roles at the intersection of design, data science, and applied AI.
+            </p>
+          </div>
+
+          <!-- Key Achievements -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">🏆 Key Achievements</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);">
+                <div style="font-weight:700;color:var(--text-highlight);font-size:0.95rem;">🏆 Global Contest Winner — Freelancer.com</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);">International Graphic Design Competition (1st Place Champion out of 150+ designers)</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);">
+                <div style="font-weight:700;color:var(--text-highlight);font-size:0.95rem;">🥇 Champion — UIU CSE Project Showcase</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);">Microprocessor &amp; Microcontroller Laboratory Project Competition</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);">
+                <div style="font-weight:700;color:var(--text-highlight);font-size:0.95rem;">🥈 1st Runners-Up — UIU CSE Project Showcase</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);">Electronics Laboratory Project Competition (Fall 2024)</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);">
+                <div style="font-weight:700;color:var(--text-highlight);font-size:0.95rem;">🎖 5th Runners-Up — UI Design (SAD)</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);">System Analysis &amp; Design UI Architecture Showcase</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research & Academic Projects -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">🔬 Research &amp; Academic Projects</h2>
+            
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Research Author — Green Computing &amp; AI Safety</span>
+                <span class="cv-entry-date">2025 – Present</span>
+              </div>
+              <div class="cv-entry-sub">Academic Research (Pending Publication)</div>
+              <ul class="cv-entry-bullets">
+                <li>Investigating the energy overhead of AI safety guardrails by comparing three configurations: no-guardrail, lightweight guardrail, and heavy LLM-as-judge.</li>
+                <li>Designed a complete factorial experiment with per-stage energy tracking using CodeCarbon and NVML (GPU power monitoring).</li>
+                <li>Implemented a six-module Python pipeline covering data collection, model inference, energy logging, and statistical analysis across four research questions.</li>
+                <li>Contributes to the green computing domain by quantifying the carbon cost of AI safety at inference time.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Research Author — Cross-Lingual NLI &amp; Multilingual LLM Benchmarking</span>
+                <span class="cv-entry-date">2024 – Present</span>
+              </div>
+              <div class="cv-entry-sub">Final Year Design Project (FYDP) · Team of Five · UIU</div>
+              <ul class="cv-entry-bullets">
+                <li>Proposed the Cross-Lingual Stance Consistency Framework (CLSC) with Confidence-Gated Adaptive Prompting (CGAP) and two novel diagnostic metrics: Cross-Lingual Accuracy Score (CLAS) and Language Agnosticism Index (LAI).</li>
+                <li>Designed an encoder-decoder architecture using LaBSE (language-agnostic contrastive encoder) with a Layer-wise Aligner, Soft Prompt Projector, and frozen decoder — novel XCR (Cross-Lingual Contrastive Regularization) training objective.</li>
+                <li>Benchmarked across 15 languages on XNLI (3-class NLI) achieving validated accuracy progression over 3 training epochs.</li>
+                <li>Implemented a Kaggle-based pipeline (LLINK) — a 2×2×2×2 grid over frozen encoders (XLM-R, LaBSE), injection mechanisms, and decoders (Llama-3.2-1B, Qwen2.5-1.5B); resolved real GPU debugging on Tesla T4 (16 GB VRAM).</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">UI/UX Designer — EduSmart (Academic AI Companion)</span>
+                <span class="cv-entry-date">2024</span>
+              </div>
+              <div class="cv-entry-sub">Figma Prototype · Mobile &amp; Desktop</div>
+              <ul class="cv-entry-bullets">
+                <li>Designed a full end-to-end responsive UI/UX prototype for an AI-powered academic assistant targeting university students across mobile and desktop platforms.</li>
+                <li>Built a complete design system with auto-layout components, interactive prototype flows covering onboarding, AI Q&amp;A, study scheduling, and resource management.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">NLP Side Project — Bangla News Image-Text Mismatch Detection</span>
+                <span class="cv-entry-date">2024</span>
+              </div>
+              <div class="cv-entry-sub">Exploratory Research · UIU</div>
+              <ul class="cv-entry-bullets">
+                <li>Built an interactive bilingual (Bangla/English) dataset and visual analysis pipeline to detect image-text mismatch in Bangladeshi news media — a misinformation detection application.</li>
+                <li>Produced interactive visualizations for exploratory data analysis across the bilingual dataset.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Professional Experience -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">💼 Professional Experience</h2>
+            
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Freelance Graphic Designer</span>
+                <span class="cv-entry-date">Aug 2021 – Present</span>
+              </div>
+              <div class="cv-entry-sub">Freelancer.com · Behance</div>
+              <ul class="cv-entry-bullets">
+                <li>Delivered 20+ client projects — brand identities, social media kits, brochures, flyers, and calendars — using Adobe Illustrator and Photoshop.</li>
+                <li>Won a global design competition on Freelancer.com, competing against international designers.</li>
+                <li>Managed client communications, creative briefs, revision cycles, and delivery timelines independently.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Surveyor &amp; Data Quality Specialist</span>
+                <span class="cv-entry-date">Dec 2021 – May 2023</span>
+              </div>
+              <div class="cv-entry-sub">Your ITeams Sp. z o.o. (Poland, Remote)</div>
+              <ul class="cv-entry-bullets">
+                <li>Completed structured remote data-collection tasks for 1.5 years in a deadline-driven international environment.</li>
+                <li>Built strong quality-assurance and data-accuracy habits across large-scale survey datasets.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Home Tutor</span>
+                <span class="cv-entry-date">2020 – 2024</span>
+              </div>
+              <div class="cv-entry-sub">Private (Self-Employed)</div>
+              <ul class="cv-entry-bullets">
+                <li>Taught Science subjects to school-level students over 4 years, managing lesson planning and individual progress tracking.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Core Skills Matrix -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">⚡ Core Technical &amp; Design Skills</h2>
+            <div class="cv-skills-grid">
+              <div>
+                <div class="cv-skill-group-title">🎨 Design &amp; Creative</div>
+                <div class="cv-skill-pill-list" style="margin-bottom:1rem;">
+                  <span class="cv-skill-pill">Adobe Illustrator (Expert)</span>
+                  <span class="cv-skill-pill">Adobe Photoshop (Expert)</span>
+                  <span class="cv-skill-pill">Figma (UI/UX, Advanced)</span>
+                  <span class="cv-skill-pill">Prototyping &amp; Auto-Layout</span>
+                  <span class="cv-skill-pill">Design Systems</span>
+                  <span class="cv-skill-pill">Brand Architecture</span>
+                  <span class="cv-skill-pill">Flyers &amp; Brochures</span>
+                  <span class="cv-skill-pill">Business Cards</span>
+                  <span class="cv-skill-pill">Calendars &amp; Print</span>
+                </div>
+
+                <div class="cv-skill-group-title">🔬 Research &amp; Data Science</div>
+                <div class="cv-skill-pill-list">
+                  <span class="cv-skill-pill">NLP &amp; Multilingual LLMs</span>
+                  <span class="cv-skill-pill">LaBSE &amp; XLM-R</span>
+                  <span class="cv-skill-pill">RAG Architectures</span>
+                  <span class="cv-skill-pill">PyTorch &amp; TensorFlow</span>
+                  <span class="cv-skill-pill">CodeCarbon (Green AI)</span>
+                  <span class="cv-skill-pill">NVML GPU Profiling</span>
+                  <span class="cv-skill-pill">OpenCV &amp; YOLO</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="cv-skill-group-title">💻 Software &amp; Technical Stack</div>
+                <div class="cv-skill-pill-list" style="margin-bottom:1rem;">
+                  <span class="cv-skill-pill">Python</span>
+                  <span class="cv-skill-pill">C / C++</span>
+                  <span class="cv-skill-pill">Java &amp; Spring Boot</span>
+                  <span class="cv-skill-pill">HTML5 / CSS3 / JavaScript</span>
+                  <span class="cv-skill-pill">React &amp; Next.js</span>
+                  <span class="cv-skill-pill">PostgreSQL &amp; MongoDB</span>
+                  <span class="cv-skill-pill">Docker</span>
+                  <span class="cv-skill-pill">Git / GitHub</span>
+                  <span class="cv-skill-pill">Linux</span>
+                  <span class="cv-skill-pill">Microcontrollers (Embedded IoT)</span>
+                </div>
+
+                <div class="cv-skill-group-title">🤝 Soft Skills &amp; Leadership</div>
+                <div class="cv-skill-pill-list">
+                  <span class="cv-skill-pill">Research Writing</span>
+                  <span class="cv-skill-pill">Visual Storytelling</span>
+                  <span class="cv-skill-pill">Client Management</span>
+                  <span class="cv-skill-pill">Team Collaboration</span>
+                  <span class="cv-skill-pill">Executive Presentations</span>
+                  <span class="cv-skill-pill">Elected Class Representative</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">🎓 Education</h2>
+            
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">B.Sc. in Computer Science &amp; Engineering</span>
+                <span class="cv-entry-date">Jun 2022 – Nov 2026 (Expected)</span>
+              </div>
+              <div class="cv-entry-sub">United International University (UIU), Dhaka</div>
+              <ul class="cv-entry-bullets">
+                <li>Specialization: Data Science</li>
+                <li>Active researcher — two concurrent papers in NLP and green computing domains.</li>
+                <li>Member: UIU HR Forum · UIU App Forum (2023–present).</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Higher Secondary Certificate (HSC) — Science</span>
+                <span class="cv-entry-date">Passing Year: 2020</span>
+              </div>
+              <div class="cv-entry-sub">Govt. Mohammadpur Model School &amp; College</div>
+              <div style="font-size:0.85rem;font-family:var(--font-mono);color:#10b981;font-weight:700;margin-top:0.25rem;">
+                Result: GPA 5.00 / 5.00 (Golden / Perfect)
+              </div>
+            </div>
+
+            <div class="cv-entry-card">
+              <div class="cv-entry-top">
+                <span class="cv-entry-heading">Secondary School Certificate (SSC) — Science</span>
+                <span class="cv-entry-date">Passing Year: 2018</span>
+              </div>
+              <div class="cv-entry-sub">Mohammadpur Preparatory School &amp; College</div>
+              <div style="font-size:0.85rem;font-family:var(--font-mono);color:#10b981;font-weight:700;margin-top:0.25rem;">
+                Result: GPA 5.00 / 5.00 (Golden / Perfect) · Elected Class Representative (2013–2018)
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Certifications -->
+          <div style="margin-bottom:2.25rem;">
+            <h2 class="cv-sec-title">📜 Verified Certifications</h2>
+            <ul class="cv-entry-bullets">
+              <li><strong>Foundations of Project Management</strong> — Google Career Certificates · Coursera</li>
+              <li><strong>Foundations of UX Design</strong> — Google · Coursera</li>
+              <li><strong>Supervised Machine Learning: Regression &amp; Classification</strong> — DeepLearning.AI / Stanford Online · Coursera</li>
+              <li><strong>Introduction to Front-End Development</strong> — Meta · Coursera</li>
+              <li><strong>Corporate Presentation Skills</strong> — Grameenphone Academy (Signed by CEO Yasir Azman)</li>
+              <li><strong>Personal Branding in AI Era</strong> — Grameenphone Academy (Signed by CEO Yasir Azman)</li>
+              <li><strong>LinkedIn 101</strong> — Grameenphone Academy (Signed by CEO Yasir Azman)</li>
+              <li><strong>Sharpen Your Interview Skills</strong> — Grameenphone Academy (Signed by CEO Yasir Azman)</li>
+              <li><strong>Smart CV</strong> — Grameenphone Academy (Signed by CEO Yasir Azman)</li>
+              <li><strong>Smart CV &amp; Project-Based Excel</strong> — LinkedIn Learning</li>
+            </ul>
+          </div>
+
+          <!-- Co-Curricular & Interests -->
+          <div>
+            <h2 class="cv-sec-title">🌟 Co-Curricular Activities &amp; Interests</h2>
+            <ul class="cv-entry-bullets">
+              <li><strong>General Member:</strong> UIU HR Forum (2023–present) &amp; UIU App Forum (2023–present).</li>
+              <li><strong>Community Animal Welfare:</strong> Animal Rescuer &amp; Volunteer (2021–present) — active in urban stray rescue and rehabilitation.</li>
+              <li><strong>Leadership:</strong> Class Representative at Mohammadpur Preparatory School &amp; College continuously for 5 years (2013–2018).</li>
+              <li><strong>Creative Pursuits:</strong> Painting, Portrait Sketching, Photography, Culinary Architecture, NLP Research, AI Product Design.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p style="color:var(--text-dim);font-size:0.88rem;">
+          &copy; 2026 <strong style="color:var(--text-highlight);">Urmi Urma Snigdha</strong>. Curriculum Vitae.
+        </p>
+        <div style="display:flex;gap:1.25rem;align-items:center;">
+          <a href="index.html" style="color:var(--accent-cyan);font-size:0.88rem;">Portfolio Home &#8594;</a>
+          <a href="blog.html" style="color:var(--accent-violet);font-size:0.88rem;">Blog Notes &#8594;</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- PDF Download Script -->
+    <script>
+      document.getElementById('download-pdf-btn').addEventListener('click', function() {
+        var element = document.getElementById('cv-content-to-export');
+        var opt = {
+          margin:       [0.3, 0.3, 0.3, 0.3],
+          filename:     'Urmi_Urma_Snigdha_CV.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2, useCORS: true },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        if (window.html2pdf) {
+          window.html2pdf().set(opt).from(element).save();
+        } else {
+          window.print();
+        }
+      });
+
+      // Theme toggle for CV page
+      var toggleBtn = document.getElementById('theme-toggle-btn');
+      var iconSpan = document.getElementById('theme-icon');
+      if (toggleBtn && iconSpan) {
+        function updateIcon() {
+          var isLight = document.documentElement.classList.contains('light');
+          iconSpan.textContent = isLight ? '☀️' : '🌙';
+        }
+        updateIcon();
+        toggleBtn.addEventListener('click', function() {
+          var isLight = document.documentElement.classList.toggle('light');
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+          updateIcon();
+        });
+      }
+    </script>
+  </body>
+</html>

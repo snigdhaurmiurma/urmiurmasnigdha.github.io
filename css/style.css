@@ -1,0 +1,228 @@
+/* ==========================================================================
+   URMI URMA SNIGDHA - DARK OCEANIC ABYSS & CHAMPAGNE SILK LIGHT MODE
+   High-Contrast Luxury Typography across both Themes · Zero Hash Tags
+   ========================================================================== */
+
+:root {
+  /* Dark Oceanic Abyss Palette */
+  --bg-primary: #020c15;
+  --bg-secondary: #051826;
+  --bg-tertiary: #0a253a;
+  --bg-card: rgba(5, 24, 40, 0.82);
+  --bg-card-hover: rgba(8, 36, 60, 0.95);
+  --bg-glass: rgba(3, 16, 28, 0.88);
+  --bg-nav: rgba(2, 12, 22, 0.9);
+
+  /* Ethereal Storm Cyan, Teal & Aqua Accents */
+  --accent-cyan: #06b6d4;
+  --accent-teal: #14b8a6;
+  --accent-aqua: #22d3ee;
+  --accent-sky: #38bdf8;
+  --accent-ocean: #0284c7;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+
+  --gradient-brand: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #14b8a6 100%);
+  --gradient-hero: linear-gradient(135deg, #38bdf8 0%, #06b6d4 40%, #14b8a6 80%, #34d399 100%);
+  --gradient-oceanic: linear-gradient(135deg, #0e7490 0%, #06b6d4 50%, #2dd4bf 100%);
+  --gradient-teal-cyan: linear-gradient(135deg, #0891b2 0%, #14b8a6 100%);
+
+  /* Text Colors (Dark Mode) */
+  --text-main: #f0fdfa;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-highlight: #ffffff;
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(6, 182, 212, 0.1);
+  --border-glass: rgba(6, 182, 212, 0.16);
+  --border-accent: rgba(6, 182, 212, 0.4);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 35px rgba(6, 182, 212, 0.22);
+
+  /* Typography */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --container-max: 1140px;
+  --header-height: 76px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   CHAMPAGNE SILK LUXURY LIGHT MODE (From uploaded reference image)
+   Rich espresso/dark walnut typography for maximum contrast & crisp readability
+   ========================================================================== */
+html.light {
+  --bg-primary: #fbf8f3;
+  --bg-secondary: #f4ece1;
+  --bg-tertiary: #ebdcc9;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(253, 249, 244, 0.92);
+  --bg-nav: rgba(251, 248, 243, 0.92);
+
+  /* High-Contrast Espresso / Dark Charcoal Typography */
+  --text-main: #231e1a;
+  --text-muted: #52473f;
+  --text-dim: #7a6e64;
+  --text-highlight: #110e0c;
+
+  /* Refined Warm Bronze & Deep Cyan Accents */
+  --accent-cyan: #0284c7;
+  --accent-teal: #0d9488;
+  --accent-aqua: #0369a1;
+  --accent-sky: #0284c7;
+  --accent-ocean: #0369a1;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+
+  --gradient-brand: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  --gradient-hero: linear-gradient(135deg, #110e0c 0%, #0369a1 50%, #0d9488 100%);
+  --gradient-oceanic: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+
+  --border-subtle: rgba(82, 71, 63, 0.12);
+  --border-glass: rgba(82, 71, 63, 0.16);
+  --border-accent: rgba(2, 132, 199, 0.4);
+  --shadow-card: 0 10px 30px rgba(82, 71, 63, 0.08);
+  --shadow-glow: 0 0 25px rgba(2, 132, 199, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Oceanic Backdrop */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('../assets/images/bg-ocean-abyss.png') no-repeat center top / cover;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  filter: contrast(1.1) brightness(0.9);
+  transition: opacity 0.3s ease;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -100px;
+  left: 30%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(20, 184, 166, 0.12) 45%, transparent 70%);
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Light Mode Silk Texture Backdrop */
+html.light body::before {
+  background: url('../assets/images/bg-silk-light.png') no-repeat center top / cover;
+  opacity: 0.45;
+  filter: contrast(1.02) brightness(1.02);
+}
+
+html.light body::after {
+  background: radial-gradient(circle, rgba(235, 220, 201, 0.5) 0%, rgba(244, 236, 225, 0.2) 50%, transparent 70%);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-highlight);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-accent);
+  margin-bottom: 0.85rem;
+  backdrop-filter: blur(10px);
+}
+
+html.light .section-tag {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--accent-cyan);
+  border-color: rgba(2, 132, 199, 0.25);
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  letter-spacing: -0.02em;
+  color: var(--text-highlight);
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 0.65rem auto 0;
+  font-size: 1.02rem;
+  color: var(--text-muted);
+}

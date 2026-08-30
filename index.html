@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urmi Urma Snigdha | UI/UX Designer · AI &amp; Data Science Researcher</title>
+    <meta name="description" content="Personal portfolio of Urmi Urma Snigdha - UI/UX Designer, Graphic Designer, and CSE (Data Science) Student at United International University." />
+    
+    <!-- Theme Auto-Detect Script -->
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        if (theme === 'light') {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Liquid Glass Navigation Capsule -->
+    <div class="header-wrapper">
+      <header class="liquid-nav-capsule">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-brand-avatar">
+            <img src="assets/photos/urmi-portrait.jpg" alt="Urmi Urma Snigdha" />
+          </div>
+          <span>Urmi Snigdha</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu-links">
+          <li><a href="#about" class="nav-item-link">About</a></li>
+          <li><a href="#skills" class="nav-item-link">Skills</a></li>
+          <li><a href="#projects" class="nav-item-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-item-link">Awards</a></li>
+          <li><a href="#education" class="nav-item-link">Education</a></li>
+          <li><a href="#blog" class="nav-item-link">Blog</a></li>
+          <li><a href="#beyond" class="nav-item-link">Beyond Design</a></li>
+        </ul>
+
+        <!-- Action & Theme Switcher -->
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <a href="cv.html" class="btn btn-secondary btn-small" title="View & Download Official CV">
+            <span>📄 View CV</span>
+          </a>
+          <a href="#contact" class="btn btn-gradient btn-small">
+            <span>Let's Talk</span>
+          </a>
+          <button id="mobile-nav-btn" class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-nav-menu" class="mobile-nav-dropdown">
+          <a href="#about" class="mobile-link">About</a>
+          <a href="#skills" class="mobile-link">Skills</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#achievements" class="mobile-link">Awards</a>
+          <a href="#education" class="mobile-link">Education</a>
+          <a href="cv.html" class="mobile-link" style="color:var(--accent-cyan);font-weight:700;">📄 View &amp; Download CV</a>
+          <a href="#blog" class="mobile-link">Blog &amp; Notes</a>
+          <a href="#beyond" class="mobile-link">Beyond Design</a>
+          <a href="#contact" class="mobile-link" style="color:var(--accent-cyan);">Contact &amp; Hire &#8594;</a>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <!-- 1. CENTERED HERO SECTION -->
+      <section id="hero" class="hero-centered-section">
+        <div class="container">
+          <div class="hero-centered-container">
+            <!-- Avatar with Gradient Ring -->
+            <div class="hero-avatar-wrap">
+              <img src="assets/photos/urmi-portrait.jpg" alt="Urmi Urma Snigdha" class="hero-avatar-img" />
+            </div>
+
+            <!-- Open to Opportunities Badge -->
+            <div class="hero-status-tag">
+              <span class="pulse-dot"></span> Open to Opportunities
+            </div>
+
+            <!-- Animated Waving Greeting & Transition Sequence -->
+            <div class="hero-greeting">
+              Hello there! <span class="wave-hand">👋</span> I'm
+            </div>
+
+            <!-- Main Name -->
+            <h1 class="hero-name-big">
+              <span class="gradient-text-hero">Urmi Urma Snigdha</span>
+            </h1>
+
+            <!-- Dynamic Typewriter Box -->
+            <div class="hero-typewriter-box">
+              <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+            </div>
+
+            <!-- Lead Bio Description -->
+            <p class="hero-centered-desc">
+              Bridging human-centered design aesthetics with analytical computer science precision. Creator of global award-winning brand systems on Freelancer.com, ergonomic digital interfaces, and intelligent data-driven experiences at United International University.
+            </p>
+
+            <!-- Action Buttons with Direct Download CV Link -->
+            <div class="hero-centered-actions">
+              <a href="#projects" class="btn btn-gradient">
+                <span>Explore Selected Works</span> &#8595;
+              </a>
+              <a href="cv.html" class="btn btn-secondary">
+                <span>📥 Download CV (PDF)</span> &#8599;
+              </a>
+              <button id="hero-copy-email-btn" class="btn btn-secondary">
+                <span>✉ Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Floating Circular Social Icons Strip -->
+            <div class="social-icons-strip">
+              <a href="https://github.com/urmiurmasnigdha" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="GitHub" aria-label="GitHub">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://www.behance.net/urmisnigdha" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Behance" aria-label="Behance">
+                <span style="font-weight:900;font-size:1.1rem;font-family:sans-serif;">Bē</span>
+              </a>
+              <a href="https://dribbble.com/urmisnigdha" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Dribbble" aria-label="Dribbble">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm10.19 10.457c-.244-.029-2.316-.271-4.706.702-.128-.277-.259-.553-.393-.827 2.593-1.282 3.655-2.909 3.731-3.033 1.054 1.344 1.688 3.03 1.368 3.158zm-2.39-4.37c-.127.185-1.246 1.733-3.791 2.927-1.127-2.073-2.383-3.921-2.529-4.133 1.954-.344 4.12.016 6.32 1.206zm-7.8 8.913c-2.361-2.92-3.844-5.362-4.01-5.641 2.373-.787 5.099-.545 5.385-.518.232.483.454.969.664 1.455-2.039 4.704-2.039 4.704-2.039 4.704zm-8.084-2.973c-.021-.334-.034-.67-.034-1.009 0-2.308.805-4.428 2.146-6.108.109.167 1.233 1.838 2.376 3.901-2.733 1.366-4.321 3.013-4.488 3.216zm1.366 1.761c.143-.16 1.705-1.745 4.398-3.045.312.518 1.454 2.453 3.633 5.485-2.585 1.155-4.887.893-5.267.839-1.258-1.026-2.221-2.355-2.764-3.279zm11.238 4.254c-.11-.115-2.074-2.181-4.072-5.421 2.228-.949 4.238-.724 4.479-.694-.282 2.454-1.611 4.582-3.407 6.115z"/></svg>
+              </a>
+              <a href="https://www.freelancer.com.bd/u/urmisnigdha" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Freelancer" aria-label="Freelancer">
+                <span style="font-weight:900;font-size:0.95rem;font-family:sans-serif;">fl</span>
+              </a>
+              <a href="https://www.upwork.com/freelancers/~011290c250c742513a" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Upwork" aria-label="Upwork">
+                <span style="font-weight:900;font-size:0.95rem;font-family:sans-serif;">Up</span>
+              </a>
+              <a href="mailto:urmiurmasnigdha@gmail.com" class="social-circle-btn" title="Send Email" aria-label="Email">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ABOUT SECTION (User's Photo beside Bio Text) -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">ABOUT ME</span>
+            <h2 class="section-title">The Intersection of AI, Creative Vision &amp; Engineering</h2>
+            <p class="section-subtitle">Bridging machine learning architectures, intuitive UX workflows, and impactful visual branding.</p>
+          </div>
+
+          <div class="about-split">
+            <div class="about-card">
+              <p class="about-text-p">
+                I am a passionate Computer Science &amp; Engineering student majoring in Data Science at United International University, driven by the mission to combine technology, creativity, and analytical thinking to build meaningful digital solutions.
+              </p>
+              <p class="about-text-p">
+                Deeply passionate about Artificial Intelligence, Machine Learning, Natural Language Processing, and Retrieval-Augmented Generation (RAG) architectures. With strong foundations in core computer science, algorithms, and software development, I enjoy building AI-driven projects that blend intelligent models with practical real-world applications.
+              </p>
+              <p class="about-text-p">
+                With hands-on experience in graphic design, I create high-impact visual materials including flyers, brochures, business cards, calendars, and branding assets using Adobe Illustrator and Photoshop. I’m continuously exploring modern design trends and enhancing my skills in logo and identity design to deliver compelling user-centered visuals.
+              </p>
+              <p class="about-text-p" style="margin-bottom:1.5rem;">
+                Curious and driven, I am actively seeking impactful opportunities and developer roles where I can apply my skills, learn from experienced teams, and contribute to innovative software solutions.
+              </p>
+              <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                <a href="cv.html" class="btn btn-gradient btn-small">
+                  <span>📄 View Full CV &amp; Credentials</span> &#8594;
+                </a>
+                <a href="#projects" class="btn btn-secondary btn-small">
+                  <span>Explore Projects</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- User's Photo beside intro text -->
+            <div>
+              <div class="about-photo-card">
+                <div class="about-photo-img-wrap">
+                  <img src="assets/photos/urmi-intro.jpg" alt="Urmi Urma Snigdha" class="about-photo-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. COMPACT SKILLS SECTION -->
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">CORE TECHNICAL SKILLS</span>
+            <h2 class="section-title">Design Mastery &amp; Engineering Stack</h2>
+            <p class="section-subtitle">Comprehensive capabilities spanning AI research, software development, and graphic design.</p>
+          </div>
+
+          <div class="skills-cols-wrap">
+            <div class="skills-col-card">
+              <h3 class="skills-col-title">🎨 Design &amp; Creative Direction</h3>
+              <div id="skills-design"></div>
+            </div>
+            <div class="skills-col-card">
+              <h3 class="skills-col-title">💻 AI, Software &amp; Data Engineering</h3>
+              <div id="skills-technical"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SELECTED WORKS & RESEARCH -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">SELECTED WORKS</span>
+            <h2 class="section-title">Featured Projects &amp; Research Case Studies</h2>
+            <p class="section-subtitle">A curation of AI research implementations, UI/UX systems, and brand identity projects.</p>
+          </div>
+
+          <div id="projects-filters" class="filters-bar"></div>
+          <div id="projects-grid" class="projects-grid"></div>
+
+          <div style="text-align:center;margin-top:3.5rem;">
+            <a href="https://www.behance.net/urmisnigdha/projects" target="_blank" rel="noopener noreferrer" class="btn btn-gradient" style="font-size:1.05rem;padding:0.9rem 2.2rem;">
+              <span>🎨 Explore All 20+ Works on Behance</span> &#8599;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ACHIEVEMENTS SECTION -->
+      <section id="achievements" class="achievements-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">HONORS &amp; RECOGNITION</span>
+            <h2 class="section-title">Milestones &amp; Competition Wins</h2>
+            <p class="section-subtitle">Global and university-level recognition for creative and technical excellence.</p>
+          </div>
+
+          <div id="achievements-grid" class="achievements-grid"></div>
+        </div>
+      </section>
+
+      <!-- 6. EDUCATION SECTION -->
+      <section id="education" class="education-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">ACADEMIC BACKGROUND</span>
+            <h2 class="section-title">Educational Foundation &amp; Excellence</h2>
+            <p class="section-subtitle">My academic trajectory with verified GPA 5.00 / 5.00 achievements.</p>
+          </div>
+
+          <div id="education-grid" class="education-grid"></div>
+        </div>
+      </section>
+
+      <!-- 7. HASIN-STYLE LIVE SEARCH BLOG SECTION -->
+      <section id="blog" class="blog-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Engineering &amp; Research Notes</span>
+            <h2 class="section-title">Technical Articles &amp; Insights</h2>
+            <p class="section-subtitle">Deep dives, architectural breakdowns, and implementation lessons across Generative AI, Computer Vision, and scalable distributed systems.</p>
+          </div>
+
+          <!-- Workable Search Input Form with Enter Key & Search Button -->
+          <div class="blog-search-bar-wrap">
+            <div class="blog-search-input-wrap">
+              <span class="blog-search-icon">🔍</span>
+              <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Search by topic or keyword (e.g. Transformers, RAG, YOLO, PyTorch)..." />
+            </div>
+            <button id="blog-search-btn" class="search-action-btn">Search</button>
+          </div>
+
+          <!-- Active Search Status Feedback -->
+          <div id="search-status-bar" class="search-status-bar">
+            <span id="search-status-text">Showing results for: ""</span>
+            <button id="search-clear-btn" class="search-clear-btn">✕ Clear</button>
+          </div>
+
+          <!-- Category Tags Bar (No Hash Tags) -->
+          <div id="blog-tags-bar" class="filters-bar"></div>
+
+          <!-- Featured Article Banner -->
+          <div id="blog-featured-wrap"></div>
+
+          <!-- All Articles Header & Grid -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+            <h3 style="font-size:1.45rem;font-weight:700;color:var(--text-highlight);">All Articles</h3>
+            <a href="blog.html" class="btn btn-secondary btn-small">
+              <span>Open Dedicated Blog Page ↗</span>
+            </a>
+          </div>
+          <div id="blog-grid" class="blog-grid-articles"></div>
+        </div>
+      </section>
+
+      <!-- 8. CERTIFICATIONS SECTION -->
+      <section id="certifications" class="certifications-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">CONTINUOUS MASTERY</span>
+            <h2 class="section-title">Professional Certifications &amp; Accreditations</h2>
+            <p class="section-subtitle">Verified credentials from Grameenphone Academy, Google, Stanford Online, Meta, and LinkedIn.</p>
+          </div>
+
+          <div id="certs-grid" class="certs-grid"></div>
+        </div>
+      </section>
+
+      <!-- 9. BEYOND DESIGN SECTION -->
+      <section id="beyond" class="beyond-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">PERSONAL DIMENSIONS</span>
+            <h2 class="section-title">Beyond Interfaces: Passions &amp; Art</h2>
+            <p class="section-subtitle">Creative disciplines, photography, culinary design, and social community advocacy.</p>
+          </div>
+
+          <div id="beyond-grid" class="beyond-grid"></div>
+        </div>
+      </section>
+
+      <!-- 10. CONTACT SECTION -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="section-title">Let's Build Meaningful Experiences Together</h2>
+            <p class="section-subtitle">Available for high-impact UI/UX design roles, brand consulting, and developer opportunities.</p>
+          </div>
+
+          <div class="contact-split">
+            <div class="contact-info-card">
+              <h3 style="font-size:1.45rem;margin-bottom:0.75rem;">Start a Conversation</h3>
+              <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.65;margin-bottom:2rem;">
+                Whether you have an upcoming product launch, branding project, full-time opportunity, or just want to say hi—feel free to reach out!
+              </p>
+
+              <div class="contact-method">
+                <div class="contact-icon-circle">✉️</div>
+                <div style="flex:1;">
+                  <div class="contact-label">EMAIL</div>
+                  <div id="contact-email-value" class="contact-value">urmiurmasnigdha@gmail.com</div>
+                </div>
+                <button id="copy-email-btn" class="copy-btn">Copy</button>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon-circle">📱</div>
+                <div>
+                  <div class="contact-label">PHONE / WHATSAPP</div>
+                  <div class="contact-value">01643-844521</div>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon-circle">📍</div>
+                <div>
+                  <div class="contact-label">LOCATION &amp; LOCAL TIME</div>
+                  <div class="contact-value">Dhaka, Bangladesh · <span id="dhaka-clock" style="color:var(--accent-cyan);">--:--:--</span></div>
+                </div>
+              </div>
+
+              <!-- All Verified Online Profiles -->
+              <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);">
+                <div class="contact-label" style="margin-bottom:0.75rem;">VERIFIED ONLINE PROFILES</div>
+                <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+                  <a href="https://github.com/urmiurmasnigdha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">GitHub &#8599;</a>
+                  <a href="https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">LinkedIn &#8599;</a>
+                  <a href="https://www.behance.net/urmisnigdha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Behance &#8599;</a>
+                  <a href="https://dribbble.com/urmisnigdha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Dribbble &#8599;</a>
+                  <a href="https://www.freelancer.com.bd/u/urmisnigdha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Freelancer &#8599;</a>
+                  <a href="https://www.upwork.com/freelancers/~011290c250c742513a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Upwork &#8599;</a>
+                  <a href="https://www.fiverr.com/urmisnigdha/buying?source=avatar_menu_profile" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Fiverr &#8599;</a>
+                  <a href="https://www.pinterest.com/urmiurma/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Pinterest &#8599;</a>
+                  <a href="http://www.youtube.com/@SnigdhasGallery" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">YouTube &#8599;</a>
+                  <a href="https://www.instagram.com/_urmi_snigdha_?igsh=aDM1OHpwYjFvMW05" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Instagram &#8599;</a>
+                  <a href="https://www.facebook.com/urmiurmasnigdha.snigdha?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Facebook &#8599;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-card">
+              <form id="portfolio-contact-form">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input type="text" id="form-name" required class="form-input" placeholder="Jane Doe" />
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email</label>
+                  <input type="email" id="form-email" required class="form-input" placeholder="jane@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="form-subject" class="form-label">Project Inquiries</label>
+                  <select id="form-subject" class="form-input">
+                    <option value="ui-ux">UI/UX &amp; Product Design</option>
+                    <option value="ai-research">AI / Data Science Collaboration</option>
+                    <option value="branding">Brand Identity &amp; Graphic Design</option>
+                    <option value="full-time">Full-Time / Developer Opportunity</option>
+                    <option value="other">General Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Message</label>
+                  <textarea id="form-message" rows="4" required class="form-input" placeholder="Tell me about your project, goals, or requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-gradient" style="width:100%;">
+                  <span>Send Message</span> &#8594;
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p style="color:var(--text-dim);font-size:0.88rem;">
+          &copy; 2026 <strong style="color:var(--text-highlight);">Urmi Urma Snigdha</strong>. Designed with precision &amp; creative passion.
+        </p>
+        <div style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+          <a href="cv.html" style="color:var(--accent-cyan);font-size:0.88rem;font-weight:700;">Curriculum Vitae</a>
+          <a href="https://github.com/urmiurmasnigdha" target="_blank" rel="noopener noreferrer" style="color:var(--text-main);font-size:0.88rem;">GitHub</a>
+          <a href="https://www.behance.net/urmisnigdha" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan);font-size:0.88rem;">Behance</a>
+          <a href="https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-sky);font-size:0.88rem;">LinkedIn</a>
+          <a href="#hero" style="font-size:0.88rem;">Back to Top &#8593;</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Universal Modal Overlay -->
+    <div id="global-modal-overlay" class="modal-overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast-msg" class="toast-msg">Email copied to clipboard! ✨</div>
+
+    <!-- Universal Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

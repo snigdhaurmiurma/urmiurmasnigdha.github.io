@@ -1,0 +1,90 @@
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS - Pixel-Perfect Workability on All Devices
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .skills-cols-wrap,
+  .timeline-cols-wrap,
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-menu-links {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .hero-bio-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btn-group {
+    justify-content: center;
+  }
+  .hero-portrait-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .stat-box {
+    padding: 1.1rem 0.75rem;
+  }
+  .stat-val {
+    font-size: 1.85rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-content-card {
+    padding: 1.5rem;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.25rem;
+  }
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btn-group .btn {
+    width: 100%;
+  }
+  .contact-info-card,
+  .contact-form-card,
+  .skills-col-card,
+  .about-card {
+    padding: 1.5rem;
+  }
+}
