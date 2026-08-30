@@ -21,9 +21,9 @@ const PORTFOLIO_DATA = {
       {
         "id": "github",
         "name": "GitHub",
-        "url": "https://github.com/urmiurmasnigdha",
+        "url": "https://github.com/snigdhaurmiurma",
         "icon": "github",
-        "label": "github.com/urmiurmasnigdha"
+        "label": "github.com/snigdhaurmiurma"
       },
       {
         "id": "linkedin",
@@ -170,8 +170,8 @@ const PORTFOLIO_DATA = {
         "Statistical Modeling",
         "GPU Profiling"
       ],
-      "behanceUrl": "https://github.com/urmiurmasnigdha",
-      "liveUrl": "https://github.com/urmiurmasnigdha"
+      "behanceUrl": "https://github.com/snigdhaurmiurma",
+      "liveUrl": "https://github.com/snigdhaurmiurma"
     },
     {
       "id": "cross-lingual-nli",
@@ -194,8 +194,8 @@ const PORTFOLIO_DATA = {
         "Llama-3.2",
         "Kaggle GPU"
       ],
-      "behanceUrl": "https://github.com/urmiurmasnigdha",
-      "liveUrl": "https://github.com/urmiurmasnigdha"
+      "behanceUrl": "https://github.com/snigdhaurmiurma",
+      "liveUrl": "https://github.com/snigdhaurmiurma"
     },
     {
       "id": "edusmart-ai",
@@ -262,8 +262,8 @@ const PORTFOLIO_DATA = {
         "Exploratory Data Analysis",
         "Matplotlib"
       ],
-      "behanceUrl": "https://github.com/urmiurmasnigdha",
-      "liveUrl": "https://github.com/urmiurmasnigdha"
+      "behanceUrl": "https://github.com/snigdhaurmiurma",
+      "liveUrl": "https://github.com/snigdhaurmiurma"
     },
     {
       "id": "synapse-ml-telemetry",
