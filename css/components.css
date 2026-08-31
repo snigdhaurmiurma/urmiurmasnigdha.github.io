@@ -1183,3 +1183,43 @@ html.light .modal-overlay {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* Contact Form Card Highlight Animation when Let's Talk is clicked */
+.contact-form-card {
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+.contact-form-card.highlight-focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.45), var(--shadow-card) !important;
+  transform: scale(1.01);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.9rem 1.15rem;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 16px !important;
+  outline: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+html.light .form-input {
+  background: #ffffff;
+  border-color: var(--border-glass);
+  color: var(--text-main);
+}
+
+.form-input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.3);
+}
+
+.btn-gradient {
+  min-height: 46px;
+}

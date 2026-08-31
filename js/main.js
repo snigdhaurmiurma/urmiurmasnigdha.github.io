@@ -503,11 +503,33 @@
   }
 
   
+  
   // 13. Contact Form AJAX Delivery directly to urmiurmasnigdha@gmail.com
   function initContactForm() {
     var form = document.getElementById('portfolio-contact-form');
     var toast = document.getElementById('toast-msg');
     var submitBtn = document.getElementById('contact-submit-btn');
+    var nameInput = document.getElementById('form-name');
+    var formCard = document.querySelector('.contact-form-card');
+
+    // Auto-focus and highlight form when "Let's Talk" is clicked
+    document.querySelectorAll('a[href="#contact"]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        var contactSec = document.getElementById('contact');
+        if (contactSec) {
+          setTimeout(function() {
+            if (nameInput) nameInput.focus();
+            if (formCard) {
+              formCard.classList.add('highlight-focus');
+              setTimeout(function() {
+                formCard.classList.remove('highlight-focus');
+              }, 2000);
+            }
+          }, 450);
+        }
+      });
+    });
+
     if (!form) return;
 
     form.addEventListener('submit', function(e) {
@@ -518,8 +540,13 @@
       var subject = document.getElementById('form-subject').value;
       var message = document.getElementById('form-message').value;
 
+      if (!name || !email || !message) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
       if (submitBtn) {
-        submitBtn.innerHTML = '<span>⏳ Sending to Urmi...</span>';
+        submitBtn.innerHTML = '<span>⏳ Sending to Urmi (urmiurmasnigdha@gmail.com)...</span>';
         submitBtn.disabled = true;
       }
 
@@ -535,19 +562,19 @@
           Email: email,
           Subject: subject,
           Message: message,
-          _subject: '🚀 New Portfolio Message from ' + name
+          _subject: '🚀 New Project Inquiry from ' + name + ' (' + subject + ')'
         })
       })
       .then(function(response) { return response.json(); })
-      .then(function(data) {
+      .then(function(resData) {
         if (toast) {
-          toast.textContent = '🎉 Thank you ' + name + '! Your message was sent directly to urmiurmasnigdha@gmail.com. ✨';
+          toast.textContent = '🎉 Thank you ' + name + '! Your message was delivered directly to urmiurmasnigdha@gmail.com. ✨';
           toast.classList.add('show');
-          setTimeout(function() { toast.classList.remove('show'); }, 5000);
+          setTimeout(function() { toast.classList.remove('show'); }, 6000);
         }
         form.reset();
         if (submitBtn) {
-          submitBtn.innerHTML = '<span>✅ Message Sent!</span>';
+          submitBtn.innerHTML = '<span>✅ Message Sent to Urmi!</span>';
           setTimeout(function() {
             submitBtn.innerHTML = '<span>🚀 Send Message Directly</span> &#8594;';
             submitBtn.disabled = false;
@@ -560,6 +587,7 @@
       });
     });
   }
+
 
 
   // 14. Live Dhaka Clock
