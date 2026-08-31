@@ -25,6 +25,7 @@
     initContactForm();
     initDhakaClock();
     initScrollSpy();
+    initVisitorTracker();
     initGlobalModalDelegation();
   }
 
@@ -637,3 +638,75 @@
     init();
   }
 })();
+
+
+  // 16. Visitor Telemetry & Email Notification Engine
+  function initVisitorTracker() {
+    // Only send 1 alert per unique browsing session to avoid inbox clutter
+    if (sessionStorage.getItem('urmi_visit_logged')) {
+      return;
+    }
+
+    var referrer = document.referrer || 'Direct Visit (Typed URL or Bookmark)';
+    if (referrer.includes('linkedin.com')) referrer = '💼 LinkedIn Profile / Post';
+    else if (referrer.includes('behance.net')) referrer = '🎨 Behance Portfolio';
+    else if (referrer.includes('github.com')) referrer = '🐙 GitHub Profile / Repo';
+    else if (referrer.includes('facebook.com')) referrer = '👥 Facebook';
+    else if (referrer.includes('google.com')) referrer = '🔍 Google Search';
+
+    var deviceType = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? '📱 Mobile Device' : '💻 Desktop / Laptop';
+    var pageTitle = document.title;
+    var currentUrl = window.location.href;
+    var screenRes = window.screen.width + 'x' + window.screen.height;
+
+    // Fetch approximate location using free IP geolocation API
+    fetch('https://ipapi.co/json/')
+      .then(function(res) { return res.json(); })
+      .then(function(loc) {
+        var city = loc.city || 'Unknown City';
+        var country = loc.country_name || 'Unknown Country';
+        var org = loc.org || loc.asn || 'Internet Provider';
+
+        sendVisitorAlert({
+          Location: city + ', ' + country,
+          IP_ISP: org,
+          Referrer_Source: referrer,
+          Device: deviceType + ' (' + navigator.platform + ')',
+          Screen_Resolution: screenRes,
+          Page_Visited: currentUrl,
+          Timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }) + ' (Dhaka Time)'
+        }, city + ', ' + country, referrer);
+      })
+      .catch(function() {
+        // Fallback if IP API blocked
+        sendVisitorAlert({
+          Location: 'Location Private / VPN',
+          Referrer_Source: referrer,
+          Device: deviceType + ' (' + navigator.platform + ')',
+          Screen_Resolution: screenRes,
+          Page_Visited: currentUrl,
+          Timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }) + ' (Dhaka Time)'
+        }, 'Global Visitor', referrer);
+      });
+
+    function sendVisitorAlert(details, locationStr, sourceStr) {
+      sessionStorage.setItem('urmi_visit_logged', 'true');
+
+      // Silently dispatch visitor summary to urmiurmasnigdha@gmail.com
+      fetch('https://formsubmit.co/ajax/urmiurmasnigdha@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: '👀 New Portfolio Visitor from ' + locationStr + ' via ' + sourceStr,
+          _template: 'table',
+          _captcha: 'false',
+          Visitor_Summary: details
+        })
+      }).catch(function(e) {
+        console.log('Analytics ping complete.');
+      });
+    }
+  }
