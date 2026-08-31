@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02141a"/>
+      <stop offset="50%" stop-color="#04232c"/>
+      <stop offset="100%" stop-color="#010c12"/>
+    </linearGradient>
+    <linearGradient id="glow-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="bar-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-green)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.1" stroke="#10b981" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Top Status Capsule -->
+  <rect x="40" y="35" width="220" height="34" rx="17" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.2"/>
+  <circle cx="58" cy="52" r="5" fill="#10b981"/>
+  <text x="72" y="56" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#34d399">NVML GPU TELEMETRY</text>
+
+  <!-- Dashboard Card 1: Energy & Carbon Benchmark -->
+  <rect x="40" y="90" width="340" height="230" rx="14" fill="rgba(5,36,46,0.85)" stroke="rgba(16,185,129,0.3)" stroke-width="1.5"/>
+  <text x="65" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">LLM Guardrail Energy Benchmarking</text>
+  <text x="65" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Carbon Emissions (gCO2eq / 1k Queries)</text>
+  
+  <!-- Energy Bar Chart -->
+  <rect x="65" y="240" width="45" height="50" rx="6" fill="#10b981" opacity="0.6"/>
+  <text x="87" y="230" font-family="'JetBrains Mono', monospace" font-size="10" fill="#34d399" text-anchor="middle">1.2g</text>
+  <text x="87" y="305" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">No Guard</text>
+
+  <rect x="135" y="200" width="45" height="90" rx="6" fill="#06b6d4" opacity="0.8"/>
+  <text x="157" y="190" font-family="'JetBrains Mono', monospace" font-size="10" fill="#22d3ee" text-anchor="middle">3.8g</text>
+  <text x="157" y="305" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Regex/Light</text>
+
+  <rect x="205" y="160" width="45" height="130" rx="6" fill="url(#bar-grad)"/>
+  <text x="227" y="150" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">8.4g</text>
+  <text x="227" y="305" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Llama-Guard</text>
+
+  <rect x="275" y="120" width="45" height="170" rx="6" fill="#f59e0b" opacity="0.9"/>
+  <text x="297" y="110" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a" text-anchor="middle">18.6g</text>
+  <text x="297" y="305" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">LLM-Judge</text>
+
+  <!-- Dashboard Card 2: Real-time GPU Power Curve -->
+  <rect x="410" y="90" width="350" height="230" rx="14" fill="rgba(5,36,46,0.85)" stroke="rgba(6,182,212,0.3)" stroke-width="1.5"/>
+  <text x="435" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Tesla T4 Power Draw Dynamics</text>
+  <text x="435" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Sampling Frequency: 50ms (NVML)</text>
+
+  <path d="M 435 260 Q 480 250, 510 180 T 580 190 T 640 140 T 730 160" fill="none" stroke="url(#glow-green)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="510" cy="180" r="5" fill="#34d399"/>
+  <circle cx="640" cy="140" r="5" fill="#22d3ee"/>
+  <text x="640" y="125" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#22d3ee" text-anchor="middle">68.4 W Peak</text>
+
+  <!-- Bottom Metric Pods -->
+  <rect x="40" y="340" width="225" height="115" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+  <text x="60" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">CodeCarbon Integrated</text>
+  <text x="60" y="415" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#10b981">0.084 kWh</text>
+
+  <rect x="285" y="340" width="230" height="115" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(6,182,212,0.2)" stroke-width="1"/>
+  <text x="305" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Inference Latency Overhead</text>
+  <text x="305" y="415" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#06b6d4">+142.8 ms</text>
+
+  <rect x="535" y="340" width="225" height="115" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <text x="555" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Safety Enforcement Rate</text>
+  <text x="555" y="415" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#f59e0b">99.4%</text>
+</svg>

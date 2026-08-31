@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-synapse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021a16"/>
+      <stop offset="50%" stop-color="#062e26"/>
+      <stop offset="100%" stop-color="#010e0c"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-synapse)"/>
+
+  <!-- Top Title Tag -->
+  <rect x="40" y="30" width="290" height="34" rx="17" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.2"/>
+  <text x="185" y="52" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">UIU CHAMPION IOT HUB</text>
+
+  <!-- Left: Microcontroller IC Schematic -->
+  <rect x="40" y="95" width="250" height="360" rx="14" fill="rgba(4,38,32,0.85)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+  <text x="65" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">ATmega328P / STM32</text>
+  <text x="65" y="150" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7">GPIO Telemetry Pinout</text>
+
+  <!-- Microcontroller Chip -->
+  <rect x="85" y="180" width="160" height="230" rx="8" fill="#011814" stroke="#10b981" stroke-width="2"/>
+  <text x="165" y="295" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">SYNAPSE-IC</text>
+
+  <!-- Pins -->
+  <g fill="#10b981">
+    <rect x="65" y="210" width="20" height="6" rx="2"/>
+    <rect x="65" y="240" width="20" height="6" rx="2"/>
+    <rect x="65" y="270" width="20" height="6" rx="2"/>
+    <rect x="65" y="300" width="20" height="6" rx="2"/>
+    <rect x="65" y="330" width="20" height="6" rx="2"/>
+
+    <rect x="245" y="210" width="20" height="6" rx="2"/>
+    <rect x="245" y="240" width="20" height="6" rx="2"/>
+    <rect x="245" y="270" width="20" height="6" rx="2"/>
+    <rect x="245" y="300" width="20" height="6" rx="2"/>
+    <rect x="245" y="330" width="20" height="6" rx="2"/>
+  </g>
+
+  <!-- Right: Real-time Waveform Oscilloscope & Anomaly Engine -->
+  <rect x="320" y="95" width="440" height="220" rx="14" fill="rgba(4,38,32,0.85)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+  <text x="345" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Multi-Channel Oscilloscope Stream</text>
+  <text x="345" y="150" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Baud Rate: 115200 bps · Live Waveform</text>
+
+  <path d="M 345 230 Q 380 180, 420 240 T 480 210 T 540 260 T 600 170 T 660 220 T 730 200" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 345 250 Q 390 280, 430 220 T 500 260 T 570 190 T 640 240 T 730 230" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3 3"/>
+
+  <!-- Right Bottom: Metrics & Sensor Stats -->
+  <rect x="320" y="335" width="210" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.2)"/>
+  <text x="340" y="370" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94a3b8">Sampling Latency</text>
+  <text x="340" y="410" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#10b981">&lt; 3.2 ms</text>
+
+  <rect x="550" y="335" width="210" height="120" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(6,182,212,0.2)"/>
+  <text x="570" y="370" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94a3b8">Packet Integrity</text>
+  <text x="570" y="410" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#06b6d4">99.98%</text>
+</svg>

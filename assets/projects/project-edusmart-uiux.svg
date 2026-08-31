@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-edu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="grad-figma" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-edu)"/>
+
+  <!-- Top App Bar -->
+  <rect x="30" y="30" width="740" height="50" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="60" cy="55" r="14" fill="url(#grad-figma)"/>
+  <text x="60" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">E</text>
+  <text x="90" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#ffffff">EduSmart AI</text>
+  <text x="680" y="60" font-family="'JetBrains Mono', monospace" font-size="12" fill="#a78bfa">UI/UX Prototype</text>
+
+  <!-- Left Column: Academic Dashboard -->
+  <rect x="30" y="100" width="460" height="360" rx="14" fill="rgba(30,27,75,0.7)" stroke="rgba(139,92,246,0.3)" stroke-width="1.5"/>
+  <text x="55" y="135" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Student Workspace &amp; GPA Analytics</text>
+
+  <!-- GPA Progress Card -->
+  <rect x="55" y="155" width="410" height="110" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="75" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Current Trimester CGPA</text>
+  <text x="75" y="225" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" fill="#38bdf8">3.94 <tspan font-size="14" fill="#64748b">/ 4.00</tspan></text>
+  
+  <path d="M 240 220 C 280 200, 320 230, 360 185 S 420 170, 445 165" fill="none" stroke="#8b5cf6" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <!-- Course Schedule Cards -->
+  <rect x="55" y="285" width="195" height="150" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(139,92,246,0.2)"/>
+  <text x="70" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff">Machine Learning</text>
+  <text x="70" y="335" font-family="'JetBrains Mono', monospace" font-size="11" fill="#a78bfa">CSE 4125 · Room 512</text>
+  <rect x="70" y="360" width="90" height="24" rx="12" fill="rgba(16,185,129,0.15)"/>
+  <text x="115" y="376" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#10b981" text-anchor="middle">ON TRACK</text>
+
+  <rect x="270" y="285" width="195" height="150" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(6,182,212,0.2)"/>
+  <text x="285" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff">Computer Vision</text>
+  <text x="285" y="335" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">CSE 4181 · Lab 04</text>
+  <rect x="285" y="360" width="100" height="24" rx="12" fill="rgba(6,182,212,0.15)"/>
+  <text x="335" y="376" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#06b6d4" text-anchor="middle">ASSIGNMENT</text>
+
+  <!-- Right Column: AI Chat Companion -->
+  <rect x="510" y="100" width="260" height="360" rx="14" fill="rgba(30,27,75,0.7)" stroke="rgba(6,182,212,0.3)" stroke-width="1.5"/>
+  <text x="530" y="135" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">AI Tutor Companion</text>
+
+  <rect x="530" y="160" width="220" height="60" rx="10" fill="rgba(139,92,246,0.15)"/>
+  <text x="545" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#cbd5e1">"How do I optimize cross-</text>
+  <text x="545" y="202" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#cbd5e1">attention layers?"</text>
+
+  <rect x="530" y="235" width="220" height="120" rx="10" fill="rgba(6,182,212,0.15)"/>
+  <text x="545" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#22d3ee">EduSmart Assistant:</text>
+  <text x="545" y="280" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" fill="#e2e8f0">Use scaled dot-product and</text>
+  <text x="545" y="298" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" fill="#e2e8f0">FlashAttention to reduce</text>
+  <text x="545" y="316" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" fill="#e2e8f0">intermediate memory copies.</text>
+
+  <rect x="530" y="405" width="220" height="38" rx="19" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="550" y="429" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748b">Ask question...</text>
+</svg>

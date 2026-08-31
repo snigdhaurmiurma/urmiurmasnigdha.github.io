@@ -1,7 +1,7 @@
 /**
- * VERIFIED PORTFOLIO DATA (V11 RELEASE)
+ * VERIFIED PORTFOLIO DATA (V13 RELEASE)
  * Urmi Urma Snigdha
- * Contains 12 High-Value Technical Articles covering all 20 Keywords
+ * Topic-Relevant Project SVGs & Diagrams (Personal Photos Exclusively in Awards & About)
  */
 
 const PORTFOLIO_DATA = {
@@ -155,9 +155,9 @@ const PORTFOLIO_DATA = {
       "category": "research",
       "categoryLabel": "Academic Research (Pending Publication)",
       "summary": "Investigating the energy overhead of AI safety guardrails across no-guardrail, lightweight guardrail, and heavy LLM-as-judge configurations using CodeCarbon and NVML GPU monitoring.",
-      "thumbnail": "assets/projects/project-uiux-1.svg",
+      "thumbnail": "assets/projects/project-green-ai.svg",
       "images": [
-        "assets/projects/project-uiux-1.svg"
+        "assets/projects/project-green-ai.svg"
       ],
       "challenge": "Quantifying the precise carbon footprint and computational cost of AI safety validation at runtime inference.",
       "solution": "Designed a 6-module Python pipeline tracking GPU power draws across 4 core research questions and benchmarking inference trade-offs.",
@@ -179,9 +179,9 @@ const PORTFOLIO_DATA = {
       "category": "research",
       "categoryLabel": "Final Year Design Project · UIU",
       "summary": "Proposed the Cross-Lingual Stance Consistency Framework (CLSC) with Confidence-Gated Adaptive Prompting (CGAP), Layer-wise Aligner, and XCR contrastive regularization over 15 languages.",
-      "thumbnail": "assets/achievements/uiu-champion-microprocessor.jpg",
+      "thumbnail": "assets/projects/project-cross-lingual-nli.svg",
       "images": [
-        "assets/achievements/uiu-champion-microprocessor.jpg"
+        "assets/projects/project-cross-lingual-nli.svg"
       ],
       "challenge": "Overcoming semantic misalignment and cross-lingual performance degradation in multilingual stance detection.",
       "solution": "Implemented an encoder-decoder architecture with frozen LaBSE/XLM-R encoders, Soft Prompt Projectors, and Llama-3.2/Qwen2.5 decoders on Tesla T4 GPUs.",
@@ -203,9 +203,9 @@ const PORTFOLIO_DATA = {
       "category": "ui-ux",
       "categoryLabel": "UI/UX & AI Prototype",
       "summary": "Full end-to-end responsive UI/UX prototype for an AI-powered academic assistant targeting university students across mobile and desktop platforms.",
-      "thumbnail": "assets/projects/project-uiux-2.svg",
+      "thumbnail": "assets/projects/project-edusmart-uiux.svg",
       "images": [
-        "assets/projects/project-uiux-2.svg"
+        "assets/projects/project-edusmart-uiux.svg"
       ],
       "challenge": "Creating an engaging, low-cognitive-load academic hub that seamlessly integrates generative AI Q&A and schedule planning.",
       "solution": "Engineered a comprehensive Figma design system with auto-layout components, onboarding flows, grade analytics, and interactive AI chat interfaces.",
@@ -226,9 +226,9 @@ const PORTFOLIO_DATA = {
       "category": "branding",
       "categoryLabel": "Brand Identity & Visual System",
       "summary": "1st Place Champion design out of 150+ international designers on Freelancer.com. Complete corporate identity, logo marks, and print stationery.",
-      "thumbnail": "assets/projects/project-branding-1.svg",
+      "thumbnail": "assets/projects/project-omnibrand.svg",
       "images": [
-        "assets/projects/project-branding-1.svg"
+        "assets/projects/project-omnibrand.svg"
       ],
       "challenge": "Designing a distinct, scalable, futuristic corporate identity that stands out in a crowded international competition.",
       "solution": "Crafted geometric vector marks with mathematical golden ratio proportions, custom logotype, and a dark-mode first stationery system.",
@@ -248,9 +248,9 @@ const PORTFOLIO_DATA = {
       "category": "research",
       "categoryLabel": "NLP & Computer Vision Research",
       "summary": "Bilingual dataset and multimodal visual analysis pipeline to detect image-text mismatch in Bangladeshi news media for misinformation detection.",
-      "thumbnail": "assets/projects/project-graphic-1.svg",
+      "thumbnail": "assets/projects/project-bangla-news.svg",
       "images": [
-        "assets/projects/project-graphic-1.svg"
+        "assets/projects/project-bangla-news.svg"
       ],
       "challenge": "Identifying subtle out-of-context image reuse in local news publications.",
       "solution": "Constructed an automated scraping, OCR, and embedding alignment pipeline with interactive exploratory data visualization.",
@@ -271,9 +271,9 @@ const PORTFOLIO_DATA = {
       "category": "data-science",
       "categoryLabel": "Data Science & Embedded IoT",
       "summary": "UIU Champion project: Real-time hardware telemetry, microcontroller logic, and data analysis engine with live interactive dashboards.",
-      "thumbnail": "assets/achievements/uiu-champion-microprocessor.jpg",
+      "thumbnail": "assets/projects/project-synapse-iot.svg",
       "images": [
-        "assets/achievements/uiu-champion-microprocessor.jpg"
+        "assets/projects/project-synapse-iot.svg"
       ],
       "challenge": "Visualizing high-frequency raw sensor streams without latency on resource-constrained hardware.",
       "solution": "Built an asynchronous serial telemetry protocol feeding into a dynamic web monitoring dashboard with anomaly alerting.",
