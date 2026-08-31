@@ -126,7 +126,7 @@
               <a href="#projects" class="btn btn-gradient">
                 <span>Explore Selected Works</span> &#8595;
               </a>
-              <a href="cv.html" class="btn btn-secondary">
+              <a href="cv.html?download=true" class="btn btn-secondary" title="Download Official PDF CV">
                 <span>📥 Download CV (PDF)</span> &#8599;
               </a>
               <button id="hero-copy-email-btn" class="btn btn-secondary">
@@ -358,21 +358,32 @@
                 Whether you have an upcoming product launch, branding project, full-time opportunity, or just want to say hi—feel free to reach out!
               </p>
 
+              
               <div class="contact-method">
                 <div class="contact-icon-circle">✉️</div>
                 <div style="flex:1;">
-                  <div class="contact-label">EMAIL</div>
-                  <div id="contact-email-value" class="contact-value">urmiurmasnigdha@gmail.com</div>
+                  <div class="contact-label">DIRECT EMAIL</div>
+                  <a href="mailto:urmiurmasnigdha@gmail.com?subject=Project%20Inquiry%20via%20Portfolio&body=Hi%20Urmi,%0D%0A%0D%0AI%20reviewed%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding..." id="contact-email-value" class="contact-value" style="color:var(--accent-cyan);text-decoration:underline;">urmiurmasnigdha@gmail.com</a>
                 </div>
                 <button id="copy-email-btn" class="copy-btn">Copy</button>
               </div>
 
               <div class="contact-method">
                 <div class="contact-icon-circle">📱</div>
-                <div>
+                <div style="flex:1;">
                   <div class="contact-label">PHONE / WHATSAPP</div>
-                  <div class="contact-value">01643-844521</div>
+                  <a href="tel:+8801643844521" class="contact-value" style="color:var(--accent-emerald);">01643-844521</a>
                 </div>
+                <a href="tel:+8801643844521" class="copy-btn" style="color:var(--accent-emerald);border-color:rgba(16,185,129,0.3);">📞 Call Now</a>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon-circle">💬</div>
+                <div style="flex:1;">
+                  <div class="contact-label">WHATSAPP CHAT</div>
+                  <div class="contact-value">Instant Messaging</div>
+                </div>
+                <a href="https://wa.me/8801643844521?text=Hello%20Urmi,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="copy-btn" style="color:#22c55e;border-color:rgba(34,197,94,0.3);">💬 WhatsApp</a>
               </div>
 
               <div class="contact-method">
@@ -383,7 +394,6 @@
                 </div>
               </div>
 
-              <!-- All Verified Online Profiles -->
               <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);">
                 <div class="contact-label" style="margin-bottom:0.75rem;">VERIFIED ONLINE PROFILES</div>
                 <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
@@ -402,35 +412,43 @@
               </div>
             </div>
 
+            
             <div class="contact-form-card">
-              <form id="portfolio-contact-form">
+              <form id="portfolio-contact-form" action="https://formsubmit.co/urmiurmasnigdha@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="🚀 New Inquiry from urmisnigdha.vercel.app!" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Urmi Urma Snigdha! I have received your message and will respond promptly." />
+
                 <div class="form-group">
                   <label for="form-name" class="form-label">Your Name</label>
-                  <input type="text" id="form-name" required class="form-input" placeholder="Jane Doe" />
+                  <input type="text" id="form-name" name="name" required class="form-input" placeholder="Jane Doe" />
                 </div>
                 <div class="form-group">
                   <label for="form-email" class="form-label">Your Email</label>
-                  <input type="email" id="form-email" required class="form-input" placeholder="jane@example.com" />
+                  <input type="email" id="form-email" name="email" required class="form-input" placeholder="jane@example.com" />
                 </div>
                 <div class="form-group">
-                  <label for="form-subject" class="form-label">Project Inquiries</label>
-                  <select id="form-subject" class="form-input">
-                    <option value="ui-ux">UI/UX &amp; Product Design</option>
-                    <option value="ai-research">AI / Data Science Collaboration</option>
-                    <option value="branding">Brand Identity &amp; Graphic Design</option>
-                    <option value="full-time">Full-Time / Developer Opportunity</option>
-                    <option value="other">General Inquiry</option>
+                  <label for="form-subject" class="form-label">Project Type / Inquiry</label>
+                  <select id="form-subject" name="subject" class="form-input">
+                    <option value="UI/UX & Product Design">UI/UX &amp; Product Design</option>
+                    <option value="AI / Data Science Collaboration">AI / Data Science Collaboration</option>
+                    <option value="Brand Identity & Graphic Design">Brand Identity &amp; Graphic Design</option>
+                    <option value="Full-Time / Developer Opportunity">Full-Time / Developer Opportunity</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="form-message" class="form-label">Message</label>
-                  <textarea id="form-message" rows="4" required class="form-input" placeholder="Tell me about your project, goals, or requirements..."></textarea>
+                  <textarea id="form-message" name="message" rows="4" required class="form-input" placeholder="Tell me about your project, goals, or opportunities..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-gradient" style="width:100%;">
-                  <span>Send Message</span> &#8594;
+                <button type="submit" id="contact-submit-btn" class="btn btn-gradient" style="width:100%;">
+                  <span>🚀 Send Message Directly</span> &#8594;
                 </button>
               </form>
             </div>
+
           </div>
         </div>
       </section>

@@ -502,23 +502,65 @@
     });
   }
 
-  // 13. Contact Form
+  
+  // 13. Contact Form AJAX Delivery directly to urmiurmasnigdha@gmail.com
   function initContactForm() {
     var form = document.getElementById('portfolio-contact-form');
     var toast = document.getElementById('toast-msg');
+    var submitBtn = document.getElementById('contact-submit-btn');
     if (!form) return;
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
+
       var name = document.getElementById('form-name').value;
-      if (toast) {
-        toast.textContent = 'Thank you ' + name + '! Message sent successfully. ✨';
-        toast.classList.add('show');
-        setTimeout(function() { toast.classList.remove('show'); }, 4000);
+      var email = document.getElementById('form-email').value;
+      var subject = document.getElementById('form-subject').value;
+      var message = document.getElementById('form-message').value;
+
+      if (submitBtn) {
+        submitBtn.innerHTML = '<span>⏳ Sending to Urmi...</span>';
+        submitBtn.disabled = true;
       }
-      form.reset();
+
+      // Send directly to urmiurmasnigdha@gmail.com via FormSubmit AJAX API
+      fetch('https://formsubmit.co/ajax/urmiurmasnigdha@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Subject: subject,
+          Message: message,
+          _subject: '🚀 New Portfolio Message from ' + name
+        })
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (toast) {
+          toast.textContent = '🎉 Thank you ' + name + '! Your message was sent directly to urmiurmasnigdha@gmail.com. ✨';
+          toast.classList.add('show');
+          setTimeout(function() { toast.classList.remove('show'); }, 5000);
+        }
+        form.reset();
+        if (submitBtn) {
+          submitBtn.innerHTML = '<span>✅ Message Sent!</span>';
+          setTimeout(function() {
+            submitBtn.innerHTML = '<span>🚀 Send Message Directly</span> &#8594;';
+            submitBtn.disabled = false;
+          }, 3500);
+        }
+      })
+      .catch(function(error) {
+        console.warn('FormSubmit AJAX fallback, submitting natively:', error);
+        form.submit();
+      });
     });
   }
+
 
   // 14. Live Dhaka Clock
   function initDhakaClock() {

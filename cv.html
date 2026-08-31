@@ -585,22 +585,65 @@
       </div>
     </footer>
 
-    <!-- PDF Download Script -->
+    
+    <!-- Enhanced PDF Download Engine -->
     <script>
-      document.getElementById('download-pdf-btn').addEventListener('click', function() {
+      function triggerDownloadPDF() {
+        var btn = document.getElementById('download-pdf-btn');
+        var originalText = btn ? btn.innerHTML : '📥 Download CV (PDF)';
+        if (btn) {
+          btn.innerHTML = '<span>⏳ Preparing PDF...</span>';
+          btn.disabled = true;
+        }
+
         var element = document.getElementById('cv-content-to-export');
+        
         var opt = {
-          margin:       [0.3, 0.3, 0.3, 0.3],
+          margin:       [0.4, 0.4, 0.4, 0.4],
           filename:     'Urmi_Urma_Snigdha_CV.pdf',
           image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2, useCORS: true },
+          html2canvas:  { scale: 2, useCORS: true, logging: false, backgroundColor: '#ffffff' },
           jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
 
         if (window.html2pdf) {
-          window.html2pdf().set(opt).from(element).save();
+          // Temporarily ensure light styling for crisp PDF printing
+          document.documentElement.classList.add('light');
+          
+          window.html2pdf().set(opt).from(element).save().then(function() {
+            if (btn) {
+              btn.innerHTML = '<span>✅ Downloaded!</span>';
+              setTimeout(function() {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+              }, 3000);
+            }
+          }).catch(function(err) {
+            console.error('PDF generation error, fallback to print:', err);
+            window.print();
+            if (btn) {
+              btn.innerHTML = originalText;
+              btn.disabled = false;
+            }
+          });
         } else {
           window.print();
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }
+      }
+
+      var dlBtn = document.getElementById('download-pdf-btn');
+      if (dlBtn) {
+        dlBtn.onclick = triggerDownloadPDF;
+      }
+
+      // If redirected with ?download=true, trigger download automatically after 800ms
+      window.addEventListener('DOMContentLoaded', function() {
+        if (window.location.search.includes('download=true')) {
+          setTimeout(triggerDownloadPDF, 800);
         }
       });
 
@@ -620,5 +663,6 @@
         });
       }
     </script>
+
   </body>
 </html>
