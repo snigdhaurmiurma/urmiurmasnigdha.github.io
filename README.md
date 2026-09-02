@@ -15,7 +15,8 @@
 
 Passionate **Computer Science & Engineering** student majoring in **Data Science** at **United International University (UIU)**. Bridges human-centered design ergonomics with machine learning and software engineering rigor.
 
-- 🏆 **1st Place Global Champion** on Freelancer.com among 150+ international designers.
+- 🥇 **1st Prize Winner (BDT 50,000)** in UIU Moving Canvas Challenge 2026 for designing the official winning university transit bus exterior livery.
+- 🏆 **1st Place Global Champion** on Freelancer.com among 150+ international designers with 5.0/5.0 client rating.
 - 🔬 **AI & NLP Researcher** developing cross-lingual stance consistency (CLSC) frameworks and multilingual LLM prompt projection architectures.
 - 🎨 **Visual Brand Architect & UI/UX Specialist** with extensive client experience delivering design systems, digital interfaces, and marketing publications.
 - 🎓 **Academic Track Record**: Verified **GPA 5.00 / 5.00** in both SSC and HSC board examinations.
@@ -27,11 +28,11 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 ### **Bachelor of Science in Computer Science & Engineering (CSE)**
 - **Institution**: United International University (UIU), Dhaka, Bangladesh
 - **Major**: Data Science
-- **Timeline**: 2020 – Present
+- **Timeline**: 2022 – 2026 (Expected)
 - **Focus**: Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, Algorithms & Distributed Systems.
 
 ### **Higher Secondary Certificate (HSC)**
-- **Institution**: Mohammadpur Preparatory School & College, Dhaka
+- **Institution**: Govt. Mohammadpur Model School & College, Dhaka
 - **Group**: Science Group
 - **Result**: **GPA 5.00 / 5.00** (Perfect Score)
 - **Passing Year**: 2020
@@ -54,12 +55,14 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 | 🥈 **1st Runner-Up** | Electronics Laboratory Showcase (UIU Fall 2024) | Awarded trophy for precision analog/digital circuit prototyping |
 | 🎖️ **5th Runner-Up** | UI Design — System Analysis & Design (UIU SAD 2023) | Ranked top tier for interactive software architecture and UX ergonomics |
 
+---
+
 ## 🛠️ Core Competencies & Technical Skills
 
 ### 🎨 **UI/UX, Product & Graphic Design**
 - **Design Applications**: Adobe Illustrator, Adobe Photoshop, Figma, InDesign, Canva.
 - **Visual Disciplines**: Design Systems, Auto-Layout, Interactive Prototyping, Wireframing, User Flow Mapping.
-- **Brand Identity**: Corporate Identity, Logo Architecture, Vector Illustration, Color Theory, Typography Systems.
+- **Brand Identity**: Corporate Identity, Logo Architecture, Vector Illustration, Color Theory, Typography Systems, Vehicle Fleet Livery.
 - **Print & Publishing**: Brochures, Flyers, Business Cards, Posters, Calendars, Marketing Stationery.
 
 ### 💻 **AI, Data Science & Machine Learning**
@@ -81,17 +84,30 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 - Proposed the *Cross-Lingual Stance Consistency* framework with Confidence-Gated Adaptive Prompting (CGAP) and layer-wise alignment across 15 languages.
 - Implemented with PyTorch, LaBSE, XLM-R, and Llama-3.2 on Kaggle Tesla T4 GPU clusters.
 
-### 2. **EduSmart — Academic AI Companion & Study Ecosystem**
+### 2. **Green Computing & AI Safety Guardrail Benchmarking**
+- Investigating the energy overhead of AI safety guardrails using CodeCarbon and NVML GPU power monitoring across 4 core research hypotheses.
+
+### 3. **EduSmart — Academic AI Companion & Study Ecosystem**
 - Complete responsive UI/UX prototype and design system in Figma for university students integrating AI tutoring and schedule optimization.
 
-### 3. **OmniBrand — Freelancer.com Global Champion Identity**
+### 4. **OmniBrand — Freelancer.com Global Champion Identity**
 - 1st Place international winning branding system featuring mathematical golden-ratio vector marks, modern logotypes, and stationery suites.
 
-### 4. **Real-Time Embedded Telemetry Hub (Synapse)**
+### 5. **Real-Time Embedded Telemetry Hub (Synapse)**
 - Microcontroller firmware and asynchronous Python telemetry pipeline visualizing sensor streams with live anomaly alerting (UIU Champion Winner).
 
-### 5. **Bangla News Image-Text Mismatch Detection**
+### 6. **Bangla News Image-Text Mismatch Detection**
 - Multimodal research framework combining web scraping, OCR, and embedding alignment to identify out-of-context image reuse in local digital media.
+
+---
+
+## 📝 Technical Articles & Research Notes
+
+- 🚌 **[The Science of Vehicle Wrap & Large-Scale Brand Architecture](https://urmisnigdha.vercel.app/blog.html)** — Designing for dynamic 3D physical canvases, anamorphic distortion compensation, CIELAB contrast ratios, and viewing distance DPI mathematics.
+- 🧠 **[Understanding 'Attention Is All You Need'](https://urmisnigdha.vercel.app/blog.html)** — Mathematical and visual deep dive into Scaled Dot-Product Attention, Multi-Head projections, Positional Encodings, and Causal Masking.
+- ⚡ **[Building Production-Grade RAG Systems](https://urmisnigdha.vercel.app/blog.html)** — Semantic chunking, dense + sparse Reciprocal Rank Fusion (RRF), cross-encoder reranking, and hallucination reduction.
+- 🌿 **[Green Computing & AI Safety](https://urmisnigdha.vercel.app/blog.html)** — Benchmarking energy overhead and carbon emissions of runtime LLM guardrails with NVML.
+- 👁️ **[Real-Time Edge Computer Vision with YOLO](https://urmisnigdha.vercel.app/blog.html)** — TensorRT quantization, non-maximum suppression (NMS), and low-latency camera inference.
 
 ---
 
@@ -117,7 +133,7 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 
 - 🌐 **Portfolio**: [https://urmisnigdha.vercel.app](https://urmisnigdha.vercel.app)
 - ✉️ **Email**: [urmiurmasnigdha@gmail.com](mailto:urmiurmasnigdha@gmail.com)
-- 📱 **Phone / WhatsApp**: 01643-844521
+- 📱 **Phone / WhatsApp**: [01643-844521](tel:+8801643844521)
 - 💼 **LinkedIn**: [linkedin.com/in/urmi-urma-snigdha-4836362a1](https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/)
 - 🎨 **Behance**: [behance.net/urmisnigdha](https://www.behance.net/urmisnigdha)
 - 🏀 **Dribbble**: [dribbble.com/urmisnigdha](https://dribbble.com/urmisnigdha)

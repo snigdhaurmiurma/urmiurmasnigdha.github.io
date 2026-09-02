@@ -1,7 +1,7 @@
 /**
- * VERIFIED PORTFOLIO DATA (V18 RELEASE)
+ * VERIFIED PORTFOLIO DATA (V19 RELEASE)
  * Urmi Urma Snigdha
- * Multi-photo verification for UIU Moving Canvas 2026 Winner
+ * Featured Blog: The Science of Vehicle Wrap & Large-Scale Brand Architecture
  */
 
 const PORTFOLIO_DATA = {
@@ -693,27 +693,50 @@ const PORTFOLIO_DATA = {
       "Spring Boot",
       "Java",
       "Docker",
-      "PostgreSQL"
+      "PostgreSQL",
+      "Brand Identity",
+      "Vector Geometry",
+      "Industrial Design",
+      "Vehicle Livery",
+      "Print Architecture",
+      "Color Theory"
     ]
   },
   "featuredBlog": {
-    "id": "blog-attention-transformers",
-    "date": "Aug 29, 2026",
-    "readTime": "14 min read",
-    "category": "Deep Learning",
-    "title": "Understanding 'Attention Is All You Need': A Mathematical & Visual Deep Dive into Transformers",
-    "summary": "A complete, visual, and mathematical masterclass on the 2017 Transformer paper. Explore Self-Attention, Multi-Head projections, Positional Encodings, Causal Masking, and PyTorch implementations.",
+    "id": "blog-vehicle-livery-architecture",
+    "date": "Sep 02, 2026",
+    "readTime": "12 min read",
+    "category": "Brand Architecture",
+    "title": "The Science of Vehicle Wrap & Large-Scale Brand Architecture: Designing for Dynamic 3D Physical Canvases",
+    "summary": "An engineering and visual design masterclass on transforming 2D vector concepts into real-world 3D vehicle fleet liveries. Exploring anamorphic distortion correction, CIELAB contrast ratios under ambient sunlight, viewing distance DPI mathematics, and high-speed transit legibility.",
     "tags": [
-      "Deep Learning",
-      "Transformers",
-      "NLP",
-      "PyTorch",
-      "Attention Mechanism",
-      "AI Research"
+      "Brand Identity",
+      "Vector Geometry",
+      "Industrial Design",
+      "Vehicle Livery",
+      "Print Architecture",
+      "Color Theory"
     ],
-    "content": "\n      <p>The 2017 seminal paper <em>'Attention Is All You Need'</em> by Vaswani et al. revolutionized artificial intelligence by replacing recurrent and convolutional architectures with multi-head self-attention mechanisms.</p>\n      \n      <h4>1. The Mathematical Foundation of Scaled Dot-Product Attention</h4>\n      <p>Scaled Dot-Product Attention calculates token interactions across Query ($Q$), Key ($K$), and Value ($V$) matrices derived via linear projections:</p>\n      <pre><code>Attention(Q, K, V) = softmax((Q · Kᵀ) / √d_k) · V</code></pre>\n      <p>The scaling factor <code>1 / √d_k</code> counteracts vanishing gradients caused by high-dimensional vector dot products pushing softmax outputs into regions with near-zero derivatives.</p>\n\n      <h4>2. Multi-Head Attention Subspaces</h4>\n      <p>Multi-Head Attention allows the model to jointly attend to information from different representation subspaces at different positions:</p>\n      <pre><code>MultiHead(Q, K, V) = Concat(head_1, ..., head_h) · Wᴼ\nwhere head_i = Attention(Q · W_iᵠ, K · W_iᴷ, V · W_iⱽ)</code></pre>\n\n      <h4>3. Positional Encodings & Causal Masking</h4>\n      <p>Since attention operates as a permutation-invariant set function, periodic trigonometric positional encodings inject sequence order:</p>\n      <pre><code>PE(pos, 2i)   = sin(pos / 10000^(2i / d_model))\nPE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))</code></pre>\n      <p>In autoregressive decoders, an upper-triangular causal attention mask ($-infty$ on future indices) prevents tokens from attending to subsequent timesteps during training.</p>\n    "
+    "content": "\n      <p>Designing for a 40-foot moving vehicle represents a unique intersection of graphic design, geometric spatial reasoning, and visual perceptual psychology. Unlike static digital screens or handheld paper stationery, a transit bus exists in a 3D physical environment subject to dynamic daylight shifts, aerodynamic contours, panel seams, and high-speed viewer motion.</p>\n      \n      <h4>1. The Mathematics of 3D Surface Distortion &amp; Anamorphic Compensation</h4>\n      <p>A vehicle's exterior is non-Euclidean—it curves across wheel arches, compound door hinges, and tapered rooflines. When flat 2D vector artwork is applied across curved metal panels, planar vector geometry undergoes optical distortion.</p>\n      <pre><code>// Optical Foreshortening Compensation Formula\nApparent_Height = True_Height · cos(θ_surface_angle)\nCompensated_Scale = Desired_Scale / cos(θ_surface_angle)</code></pre>\n      <p>To ensure brand typography remains perpendicular and undistorted when viewed from eye-level pedestrian angles, vectors across compound curves must be pre-warped with reverse trigonometric compensation.</p>\n\n      <h4>2. Motion Legibility: Visual Hierarchy at 60 km/h</h4>\n      <p>A pedestrian or commuter has an average visual fixation window of only <strong>1.5 to 3.0 seconds</strong> to register a passing transit vehicle. Under this cognitive constraint, traditional cluttered layouts fail. Effective livery architecture enforces a rigid 3-tier perceptual hierarchy:</p>\n      <ul>\n        <li><strong>Tier 1 (Instantaneous Macro Mark):</strong> High-contrast color block geometry that establishes immediate brand recognition at 100+ meters.</li>\n        <li><strong>Tier 2 (Primary Identity &amp; Typography):</strong> Sans-serif geometric logotype sized with a minimum stroke weight to prevent line thinning at distance.</li>\n        <li><strong>Tier 3 (Micro Details &amp; Taglines):</strong> Secondary accreditations positioned exclusively on static zones (rear bumper, passenger entry points).</li>\n      </ul>\n\n      <h4>3. CIELAB Color Space &amp; Ambient Daylight Illumination</h4>\n      <p>Colors perceived on RGB monitors shift dramatically when printed on cast vinyl under direct outdoor solar radiation (5500K–6500K daylight vs 2700K streetlights). Using the CIELAB colour difference formula (ΔE*):</p>\n      <pre><code>ΔE* = √[ (ΔL*)^2 + (Δa*)^2 + (Δb*)^2 ]</code></pre>\n      <p>We mandate a perceptual lightness contrast (ΔL*) of greater than <strong>45 units</strong> between the background livery tone and primary typography, ensuring complete legibility across cloudy skies, heavy rain, and night streetlamp illumination.</p>\n\n      <h4>4. Production Dielines, Seams &amp; Vinyl Rasterization (DPI vs Viewing Distance)</h4>\n      <p>Large-format vector printing does not require 300 DPI (which results in unmanageable multi-gigabyte RIP files). The human eye's angular resolution limit (1 arcminute) dictates the minimum resolving DPI based on distance:</p>\n      <pre><code>DPI_optimal = 3438 / Distance_in_inches\nAt 10 feet (120 inches): DPI_optimal ≈ 28.65 DPI (Rendered at 100–150 DPI in 1:10 scale)</code></pre>\n      <p>Critical text must never intersect body panel split lines, window rubber gaskets, or diesel fuel cap access doors. Precision die-line engineering ensures every graphic element flows seamlessly without awkward mechanical cuts during physical installation.</p>\n  "
   },
   "blogs": [
+    {
+      "id": "blog-vehicle-livery-architecture",
+      "date": "Sep 02, 2026",
+      "readTime": "12 min read",
+      "category": "Brand Architecture",
+      "title": "The Science of Vehicle Wrap & Large-Scale Brand Architecture: Designing for Dynamic 3D Physical Canvases",
+      "summary": "An engineering and visual design masterclass on transforming 2D vector concepts into real-world 3D vehicle fleet liveries. Exploring anamorphic distortion correction, CIELAB contrast ratios under ambient sunlight, viewing distance DPI mathematics, and high-speed transit legibility.",
+      "tags": [
+        "Brand Identity",
+        "Vector Geometry",
+        "Industrial Design",
+        "Vehicle Livery",
+        "Print Architecture",
+        "Color Theory"
+      ],
+      "content": "\n      <p>Designing for a 40-foot moving vehicle represents a unique intersection of graphic design, geometric spatial reasoning, and visual perceptual psychology. Unlike static digital screens or handheld paper stationery, a transit bus exists in a 3D physical environment subject to dynamic daylight shifts, aerodynamic contours, panel seams, and high-speed viewer motion.</p>\n      \n      <h4>1. The Mathematics of 3D Surface Distortion &amp; Anamorphic Compensation</h4>\n      <p>A vehicle's exterior is non-Euclidean—it curves across wheel arches, compound door hinges, and tapered rooflines. When flat 2D vector artwork is applied across curved metal panels, planar vector geometry undergoes optical distortion.</p>\n      <pre><code>// Optical Foreshortening Compensation Formula\nApparent_Height = True_Height · cos(θ_surface_angle)\nCompensated_Scale = Desired_Scale / cos(θ_surface_angle)</code></pre>\n      <p>To ensure brand typography remains perpendicular and undistorted when viewed from eye-level pedestrian angles, vectors across compound curves must be pre-warped with reverse trigonometric compensation.</p>\n\n      <h4>2. Motion Legibility: Visual Hierarchy at 60 km/h</h4>\n      <p>A pedestrian or commuter has an average visual fixation window of only <strong>1.5 to 3.0 seconds</strong> to register a passing transit vehicle. Under this cognitive constraint, traditional cluttered layouts fail. Effective livery architecture enforces a rigid 3-tier perceptual hierarchy:</p>\n      <ul>\n        <li><strong>Tier 1 (Instantaneous Macro Mark):</strong> High-contrast color block geometry that establishes immediate brand recognition at 100+ meters.</li>\n        <li><strong>Tier 2 (Primary Identity &amp; Typography):</strong> Sans-serif geometric logotype sized with a minimum stroke weight to prevent line thinning at distance.</li>\n        <li><strong>Tier 3 (Micro Details &amp; Taglines):</strong> Secondary accreditations positioned exclusively on static zones (rear bumper, passenger entry points).</li>\n      </ul>\n\n      <h4>3. CIELAB Color Space &amp; Ambient Daylight Illumination</h4>\n      <p>Colors perceived on RGB monitors shift dramatically when printed on cast vinyl under direct outdoor solar radiation (5500K–6500K daylight vs 2700K streetlights). Using the CIELAB colour difference formula (ΔE*):</p>\n      <pre><code>ΔE* = √[ (ΔL*)^2 + (Δa*)^2 + (Δb*)^2 ]</code></pre>\n      <p>We mandate a perceptual lightness contrast (ΔL*) of greater than <strong>45 units</strong> between the background livery tone and primary typography, ensuring complete legibility across cloudy skies, heavy rain, and night streetlamp illumination.</p>\n\n      <h4>4. Production Dielines, Seams &amp; Vinyl Rasterization (DPI vs Viewing Distance)</h4>\n      <p>Large-format vector printing does not require 300 DPI (which results in unmanageable multi-gigabyte RIP files). The human eye's angular resolution limit (1 arcminute) dictates the minimum resolving DPI based on distance:</p>\n      <pre><code>DPI_optimal = 3438 / Distance_in_inches\nAt 10 feet (120 inches): DPI_optimal ≈ 28.65 DPI (Rendered at 100–150 DPI in 1:10 scale)</code></pre>\n      <p>Critical text must never intersect body panel split lines, window rubber gaskets, or diesel fuel cap access doors. Precision die-line engineering ensures every graphic element flows seamlessly without awkward mechanical cuts during physical installation.</p>\n  "
+    },
     {
       "id": "blog-attention-transformers",
       "date": "Aug 29, 2026",
