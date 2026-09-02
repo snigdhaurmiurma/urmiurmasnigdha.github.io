@@ -131,30 +131,59 @@
     }
   }
 
-  // 2. Show Achievement Modal
+  
+  // 2. Show Achievement Modal (With Multi-Photo Slider Support)
   function showAchievement(achId) {
     var data = window.PORTFOLIO_DATA || {};
     var ach = (data.achievements || []).find(function(a) { return a.id === achId; });
     if (!ach) return;
+
+    var images = ach.images && ach.images.length ? ach.images : [ach.image];
+    var currentSlide = 0;
 
     var html = '<div style="margin-bottom:1.5rem;">' +
       '<span style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);margin-bottom:0.75rem;display:inline-block;padding:0.35rem 0.85rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;">' + ach.badge + '</span>' +
       '<h2 style="font-size:1.75rem;color:var(--text-highlight);line-height:1.3;margin-bottom:0.35rem;">' + ach.title + '</h2>' +
       '<div style="color:var(--accent-cyan);font-weight:600;font-size:0.95rem;margin-bottom:1.25rem;">' + ach.event + ' (' + ach.date + ')</div>' +
       
-      '<div style="width:100%;aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;background:#000;margin-bottom:1.5rem;border:1px solid var(--border-glass);">' +
-      '<img src="' + ach.image + '" alt="' + ach.title + '" style="width:100%;height:100%;object-fit:contain;" />' +
+      '<div style="position:relative;width:100%;aspect-ratio:16/11;border-radius:var(--radius-lg);overflow:hidden;background:#000;margin-bottom:1.5rem;border:1px solid var(--border-glass);">' +
+      '<img id="ach-slider-current-img" src="' + images[0] + '" alt="' + ach.title + '" style="width:100%;height:100%;object-fit:contain;" />' +
+      (images.length > 1 ?
+        '<div style="position:absolute;bottom:0.75rem;right:0.75rem;display:flex;gap:0.5rem;align-items:center;background:rgba(0,0,0,0.65);padding:0.35rem 0.75rem;border-radius:var(--radius-full);backdrop-filter:blur(8px);">' +
+        '<span id="ach-slide-counter" style="font-size:0.75rem;font-family:var(--font-mono);color:#fff;margin-right:0.3rem;">1 / ' + images.length + '</span>' +
+        '<button id="ach-prev-slide-btn" class="btn btn-secondary btn-small" style="padding:0.25rem 0.6rem;font-size:0.75rem;">&#8592; Prev</button>' +
+        '<button id="ach-next-slide-btn" class="btn btn-secondary btn-small" style="padding:0.25rem 0.6rem;font-size:0.75rem;">Next &#8594;</button>' +
+        '</div>' : '') +
       '</div>' +
 
       '<p style="color:var(--text-muted);font-size:1rem;line-height:1.75;margin-bottom:1.75rem;">' + ach.description + '</p>' +
       
       '<div style="display:flex;gap:1rem;flex-wrap:wrap;">' +
-      (ach.proofUrl ? '<a href="' + ach.proofUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient"><span>View Verified Document / Photo</span> &#8599;</a>' : '') +
       '<button class="btn btn-secondary" onclick="window.PORTFOLIO_LIGHTBOX.closeModal()">Close</button>' +
       '</div>' +
       '</div>';
 
     openModal(html);
+
+    if (images.length > 1) {
+      var prevBtn = document.getElementById('ach-prev-slide-btn');
+      var nextBtn = document.getElementById('ach-next-slide-btn');
+      var imgElem = document.getElementById('ach-slider-current-img');
+      var counterElem = document.getElementById('ach-slide-counter');
+
+      if (prevBtn && nextBtn && imgElem) {
+        prevBtn.onclick = function() {
+          currentSlide = (currentSlide - 1 + images.length) % images.length;
+          imgElem.src = images[currentSlide];
+          if (counterElem) counterElem.textContent = (currentSlide + 1) + ' / ' + images.length;
+        };
+        nextBtn.onclick = function() {
+          currentSlide = (currentSlide + 1) % images.length;
+          imgElem.src = images[currentSlide];
+          if (counterElem) counterElem.textContent = (currentSlide + 1) + ' / ' + images.length;
+        };
+      }
+    }
   }
 
   // 3. Show Certificate Modal

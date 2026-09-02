@@ -1,7 +1,7 @@
 /**
- * VERIFIED PORTFOLIO DATA (V17 RELEASE)
+ * VERIFIED PORTFOLIO DATA (V18 RELEASE)
  * Urmi Urma Snigdha
- * Includes 1st Prize Winner UIU Moving Canvas Challenge 2026 (BDT 50,000)
+ * Multi-photo verification for UIU Moving Canvas 2026 Winner
  */
 
 const PORTFOLIO_DATA = {
@@ -298,7 +298,11 @@ const PORTFOLIO_DATA = {
       "badge": "1ST PRIZE · BDT 50,000",
       "image": "assets/achievements/uiu-moving-canvas-winner.jpg",
       "description": "Awarded 1st Prize and BDT 50,000 prize money for designing the winning exterior branding and vehicle livery for the United International University (UIU) official student transit bus fleet.",
-      "proofUrl": "assets/achievements/uiu-moving-canvas-winner.jpg"
+      "proofUrl": "assets/achievements/uiu-moving-canvas-winner.jpg",
+      "images": [
+        "assets/achievements/uiu-moving-canvas-winner.jpg",
+        "assets/achievements/uiu-moving-canvas-bus.jpg"
+      ]
     },
     {
       "id": "freelancer-champion",
