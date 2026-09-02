@@ -1,7 +1,7 @@
 /**
- * VERIFIED PORTFOLIO DATA (V13 RELEASE)
+ * VERIFIED PORTFOLIO DATA (V17 RELEASE)
  * Urmi Urma Snigdha
- * Topic-Relevant Project SVGs & Diagrams (Personal Photos Exclusively in Awards & About)
+ * Includes 1st Prize Winner UIU Moving Canvas Challenge 2026 (BDT 50,000)
  */
 
 const PORTFOLIO_DATA = {
@@ -289,6 +289,17 @@ const PORTFOLIO_DATA = {
     }
   ],
   "achievements": [
+    {
+      "id": "uiu-moving-canvas-winner",
+      "title": "1st Prize Winner — UIU Moving Canvas Challenge 2026",
+      "event": "Official University Bus Livery & Brand Identity Competition",
+      "date": "2026",
+      "rank": "1st Prize Winner (BDT 50,000)",
+      "badge": "1ST PRIZE · BDT 50,000",
+      "image": "assets/achievements/uiu-moving-canvas-winner.jpg",
+      "description": "Awarded 1st Prize and BDT 50,000 prize money for designing the winning exterior branding and vehicle livery for the United International University (UIU) official student transit bus fleet.",
+      "proofUrl": "assets/achievements/uiu-moving-canvas-winner.jpg"
+    },
     {
       "id": "freelancer-champion",
       "title": "Global Contest Winner — Freelancer.com",

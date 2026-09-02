@@ -48,12 +48,11 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 
 | Award / Honor | Event & Institution | Achievement |
 | :--- | :--- | :--- |
+| 🥇 **1st Prize Winner (BDT 50,000)** | UIU Moving Canvas Challenge 2026 | Awarded 1st Prize for designing the official winning transit bus exterior livery for UIU |
 | 🥇 **1st Place Global Champion** | International Graphic Design Contest (Freelancer.com) | Won 1st Place against 150+ global designers with 5.0/5.0 client rating |
 | 🥇 **Champion (1st Place)** | Microprocessor & Microcontroller Lab Showcase (UIU) | 1st Place for intelligent IoT hardware telemetry and firmware design |
 | 🥈 **1st Runner-Up** | Electronics Laboratory Showcase (UIU Fall 2024) | Awarded trophy for precision analog/digital circuit prototyping |
 | 🎖️ **5th Runner-Up** | UI Design — System Analysis & Design (UIU SAD 2023) | Ranked top tier for interactive software architecture and UX ergonomics |
-
----
 
 ## 🛠️ Core Competencies & Technical Skills
 
