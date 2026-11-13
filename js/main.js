@@ -26,7 +26,6 @@
     initDhakaClock();
     initScrollSpy();
     initVisitorTracker();
-    initLiveLabs();
     init3DCardTilt();
     initGlobalModalDelegation();
   }
@@ -182,18 +181,22 @@
           '<img src="' + p.thumbnail + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />' +
         '</div>' : '';
 
+      var githubPill = p.liveUrl ?
+        '<a href="' + p.liveUrl + '" target="_blank" rel="noopener noreferrer" class="project-gh-pill" onclick="event.stopPropagation();" title="View Source on GitHub"><span>GitHub</span> &#8599;</a>' :
+        (p.behanceUrl ? '<a href="' + p.behanceUrl + '" target="_blank" rel="noopener noreferrer" class="project-gh-pill" onclick="event.stopPropagation();"><span>Behance</span> &#8599;</a>' : '');
+
       return '<div class="project-card" data-project-id="' + p.id + '">' +
         imgHtml +
         '<div class="project-card-top">' +
           '<span class="project-cat-badge">' + p.categoryLabel + '</span>' +
-          '<span style="font-size:0.8rem;font-weight:700;color:var(--accent-cyan);">Interactive Demo &#8599;</span>' +
+          githubPill +
         '</div>' +
         '<h3 class="project-title">' + p.title + '</h3>' +
         '<p class="project-desc">' + p.summary + '</p>' +
         '<div class="project-tools-row">' + toolsHtml + '</div>' +
         '<div class="project-card-footer">' +
-          '<span>Launch Interactive Demo &#8594;</span>' +
-          '<span style="font-size:0.75rem;color:var(--text-dim);">Live Project</span>' +
+          '<span>Explore Architecture &amp; Case Study &#8594;</span>' +
+          (p.liveUrl ? '<span style="font-size:0.78rem;font-weight:700;color:var(--accent-cyan);">Workable on GitHub ↗</span>' : '<span style="font-size:0.75rem;color:var(--text-dim);">Case Study</span>') +
         '</div>' +
       '</div>';
     }).join('');
@@ -398,39 +401,7 @@
     }).join('');
   }
 
-  // 9B. Live Interactive Labs Engine
-  function initLiveLabs() {
-    var mount = document.getElementById('interactive-labs-mount');
-    var tabs = document.querySelectorAll('.live-labs-tab-btn');
-    if (!mount || !tabs.length) return;
-
-    function loadTab(tabKey) {
-      if (!window.PORTFOLIO_DEMOS) return;
-      if (tabKey === 'fundbridge') {
-        window.PORTFOLIO_DEMOS.initFundBridgeDemo('interactive-labs-mount');
-      } else if (tabKey === 'medvision') {
-        window.PORTFOLIO_DEMOS.initMedVisionDemo('interactive-labs-mount');
-      } else if (tabKey === 'marketpulse') {
-        window.PORTFOLIO_DEMOS.initMarketPulseDemo('interactive-labs-mount');
-      } else if (tabKey === 'docuquery') {
-        window.PORTFOLIO_DEMOS.initDocuQueryDemo('interactive-labs-mount');
-      }
-    }
-
-    tabs.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        tabs.forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        var tabKey = btn.getAttribute('data-tab');
-        loadTab(tabKey);
-      });
-    });
-
-    // Default load fundbridge
-    loadTab('fundbridge');
-  }
-
-  // 9C. Giga-style 3D Tilt Transitions
+  // 9B. Giga-style 3D Tilt Transitions
   function init3DCardTilt() {
     var cards = document.querySelectorAll('.project-card, .blog-item-card, .skills-col-card, .achievement-card');
     cards.forEach(function(card) {

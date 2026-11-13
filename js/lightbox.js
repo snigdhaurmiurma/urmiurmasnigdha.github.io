@@ -106,27 +106,20 @@
       '<div style="display:flex;gap:0.45rem;flex-wrap:wrap;">' + toolsHtml + '</div>' +
       '</div>' +
 
-      '<div id="modal-interactive-demo-slot" style="margin-bottom:2rem;"></div>' +
+      (project.liveUrl ?
+        '<div style="background:rgba(6,182,212,0.06);border:1px solid var(--border-accent);padding:1.25rem;border-radius:var(--radius-md);margin-bottom:1.75rem;">' +
+        '<h4 style="color:var(--accent-cyan);font-size:0.95rem;margin-bottom:0.4rem;font-weight:700;">📂 Workable Source Code &amp; Documentation</h4>' +
+        '<p style="color:var(--text-muted);font-size:0.86rem;line-height:1.6;margin-bottom:0.85rem;">This project is fully engineered, tested, and workable on GitHub with modular source code, setup scripts, dependencies, and reproducible execution commands.</p>' +
+        '<a href="' + project.liveUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-small"><span>🚀 Open Repository on GitHub</span> &#8599;</a>' +
+        '</div>' : '') +
 
-      '<div style="display:flex;gap:1rem;flex-wrap:wrap;">' +
-      (project.behanceUrl ? '<a href="' + project.behanceUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient"><span>Explore on External Link</span> &#8599;</a>' : '') +
+      '<div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">' +
+      (project.liveUrl ? '<a href="' + project.liveUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient"><span>View on GitHub</span> &#8599;</a>' :
+        (project.behanceUrl ? '<a href="' + project.behanceUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient"><span>View on Behance</span> &#8599;</a>' : '')) +
       '<button class="btn btn-secondary" onclick="window.PORTFOLIO_LIGHTBOX.closeModal()">Close</button>' +
       '</div>';
 
     openModal(html);
-
-    // Initialize Interactive Workable Demo if available
-    if (window.PORTFOLIO_DEMOS) {
-      if (projectId === 'medvision-ai') {
-        window.PORTFOLIO_DEMOS.initMedVisionDemo('modal-interactive-demo-slot');
-      } else if (projectId === 'fundbridge') {
-        window.PORTFOLIO_DEMOS.initFundBridgeDemo('modal-interactive-demo-slot');
-      } else if (projectId === 'marketpulse-mining') {
-        window.PORTFOLIO_DEMOS.initMarketPulseDemo('modal-interactive-demo-slot');
-      } else if (projectId === 'docuquery-rag') {
-        window.PORTFOLIO_DEMOS.initDocuQueryDemo('modal-interactive-demo-slot');
-      }
-    }
 
     if (images.length > 1) {
       var prevBtn = document.getElementById('prev-slide-btn');

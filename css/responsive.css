@@ -43,9 +43,29 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. TABLETS & LARGE SMARTPHONES (<= 860px)
+   1B. LAPTOPS & INTERMEDIATE VIEWPORTS (1025px - 1140px)
    -------------------------------------------------------------------------- */
-@media (max-width: 860px) {
+@media (max-width: 1140px) and (min-width: 1025px) {
+  .nav-menu-links {
+    gap: 0.15rem;
+  }
+  .nav-item-link {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.82rem;
+  }
+  .nav-brand {
+    font-size: 0.95rem;
+  }
+  .nav-actions .btn {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & LARGE SMARTPHONES (<= 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
   /* Navigation Bar Adaptations */
   .header-wrapper {
     top: 0.65rem;
