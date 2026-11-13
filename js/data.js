@@ -13,8 +13,7 @@ const PORTFOLIO_DATA = {
     "degree": "B.Sc. in Computer Science & Engineering",
     "avatar": "assets/photos/urmi-portrait.jpg",
     "email": "urmiurmasnigdha@gmail.com",
-    "phone": "01643-844521",
-    "location": "Mohammadpur, Dhaka, Bangladesh",
+    "location": "Dhaka, Bangladesh",
     "availability": "Available Immediately for Full-Time & Remote Roles",
     "aboutText": "I am a Computer Science & Engineering graduate from United International University (UIU), driven by the mission to combine robust software engineering, analytical problem-solving, and human-centered visual design.\n\nWith strong foundations across core computer science, I specialize in Machine Learning, Digital Image Processing, Data Mining, and Natural Language Processing. I focus on building practical, deterministic software pipelines—from computer vision segmentation algorithms to predictive customer mining and vector retrieval-augmented generation (RAG) architectures.\n\nComplementing my engineering background, I bring deep hands-on proficiency in UI/UX and graphic design using Figma, Adobe Illustrator, and Photoshop. I design scalable design systems, interactive prototypes, and production-ready marketing assets, ensuring end-to-end digital solutions are both technically resilient and visually compelling.\n\nHaving completed my degree, I am actively seeking full-time software engineering, AI/data science, and design roles—both locally and remotely—where I can contribute immediate value to mission-critical projects.",
     "socialLinks": [

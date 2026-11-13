@@ -134,8 +134,9 @@ Computer Science & Engineering graduate from **United International University (
 
 - 🌐 **Portfolio**: [https://urmisnigdha.vercel.app](https://urmisnigdha.vercel.app)
 - ✉️ **Email**: [urmiurmasnigdha@gmail.com](mailto:urmiurmasnigdha@gmail.com)
-- 📱 **Phone / WhatsApp**: [01643-844521](tel:+8801643844521)
 - 💼 **LinkedIn**: [linkedin.com/in/urmi-urma-snigdha-4836362a1](https://www.linkedin.com/in/urmi-urma-snigdha-4836362a1/)
+- 🎨 **Behance**: [behance.net/urmisnigdha](https://www.behance.net/urmisnigdha)
+- 🐙 **GitHub**: [github.com/snigdhaurmiurma](https://github.com/snigdhaurmiurma)
 - 🎨 **Behance**: [behance.net/urmisnigdha](https://www.behance.net/urmisnigdha)
 - 🏀 **Dribbble**: [dribbble.com/urmisnigdha](https://dribbble.com/urmisnigdha)
 - 💼 **Freelancer**: [freelancer.com.bd/u/urmisnigdha](https://www.freelancer.com.bd/u/urmisnigdha)
