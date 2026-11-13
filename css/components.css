@@ -1267,27 +1267,6 @@ html.light .form-input {
   display: block;
 }
 
-.intro-showreel-modal {
-  background: var(--bg-card);
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  max-width: 980px;
-  width: 95%;
-  margin: 2rem auto;
-  box-shadow: var(--shadow-card), 0 0 50px rgba(6, 182, 212, 0.35);
-  backdrop-filter: blur(25px);
-  position: relative;
-  z-index: 10001;
-}
-
-.intro-showreel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
 /* Project GitHub Link Pills */
 .project-gh-pill {
   font-size: 0.75rem;
