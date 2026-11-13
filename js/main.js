@@ -54,11 +54,12 @@
     var textElem = document.getElementById('typewriter-text');
     if (!textElem) return;
 
-    var phrases = [
+        var phrases = [
+      'Computer Science & Engineering Graduate',
+      'Digital Image Processing & Computer Vision',
       'UI/UX & Product Designer',
-      'AI & Data Science Researcher',
-      'Graphic & Visual Identity Designer',
-      'Freelancer.com Global Contest Champion'
+      'Data Mining & Predictive Analytics',
+      '1st Prize Winner — UIU Moving Canvas 2026'
     ];
 
     var phraseIndex = 0;

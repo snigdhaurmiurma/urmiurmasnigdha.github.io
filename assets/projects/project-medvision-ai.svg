@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-med" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021817"/>
+      <stop offset="50%" stop-color="#042a27"/>
+      <stop offset="100%" stop-color="#011110"/>
+    </linearGradient>
+    <linearGradient id="cyan-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-med)"/>
+
+  <!-- Status Capsule -->
+  <rect x="40" y="30" width="310" height="34" rx="17" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1.2"/>
+  <circle cx="58" cy="47" r="5" fill="#06b6d4"/>
+  <text x="74" y="52" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#22d3ee">DIGITAL IMAGE PROCESSING · OPENCV</text>
+
+  <!-- Left: Microscope Cellular Field with Watershed Contours -->
+  <rect x="40" y="85" width="410" height="380" rx="14" fill="rgba(2,24,23,0.85)" stroke="rgba(6,182,212,0.3)" stroke-width="1.5"/>
+  <text x="65" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Automated Cellular Segmentation</text>
+  <text x="65" y="140" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Watershed Boundary Isolation &amp; Nuclei Count</text>
+
+  <!-- Cell Canvas -->
+  <g transform="translate(65, 160)">
+    <!-- Normal Cells -->
+    <circle cx="60" cy="50" r="28" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="2"/>
+    <circle cx="60" cy="50" r="10" fill="#10b981"/>
+    <text x="60" y="95" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">#01 [0.94]</text>
+
+    <circle cx="160" cy="65" r="32" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="2"/>
+    <circle cx="160" cy="65" r="12" fill="#10b981"/>
+    <text x="160" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">#02 [0.92]</text>
+
+    <circle cx="270" cy="55" r="26" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="2"/>
+    <circle cx="270" cy="55" r="9" fill="#10b981"/>
+    <text x="270" y="100" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">#03 [0.96]</text>
+
+    <!-- Overlapping Splitted Cells via Watershed -->
+    <path d="M 80,180 A 30,30 0 1,0 125,180 Z" fill="rgba(6,182,212,0.25)" stroke="#06b6d4" stroke-width="2"/>
+    <path d="M 125,180 A 30,30 0 1,1 170,180 Z" fill="rgba(6,182,212,0.25)" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="125" y1="150" x2="125" y2="210" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="3,3"/>
+    <text x="125" y="235" font-family="'JetBrains Mono', monospace" font-size="9" fill="#67e8f9" text-anchor="middle">Watershed Cut</text>
+
+    <!-- Flagged Anomaly (Irregular Ellipse) -->
+    <ellipse cx="260" cy="180" rx="42" ry="18" fill="rgba(244,63,94,0.25)" stroke="#f43f5e" stroke-width="2.5" transform="rotate(-25 260 180)"/>
+    <rect x="205" y="145" width="110" height="70" fill="none" stroke="#f43f5e" stroke-width="1.2" stroke-dasharray="4,4"/>
+    <text x="260" y="240" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#f43f5e" text-anchor="middle">⚠️ ANOMALY [0.54]</text>
+  </g>
+
+  <!-- Right: Metrics & Morphometry Dashboard -->
+  <rect x="470" y="85" width="290" height="180" rx="14" fill="rgba(2,24,23,0.85)" stroke="rgba(16,185,129,0.3)" stroke-width="1.5"/>
+  <text x="495" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Morphometric Extraction</text>
+  
+  <rect x="495" y="145" width="240" height="35" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="510" y="167" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">Otsu T* Threshold: <tspan fill="#34d399" font-weight="700">142</tspan></text>
+
+  <rect x="495" y="190" width="240" height="35" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="510" y="212" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">Mean Circularity: <tspan fill="#22d3ee" font-weight="700">0.892</tspan></text>
+
+  <!-- Bottom Metric Pods -->
+  <rect x="470" y="285" width="135" height="85" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(6,182,212,0.2)"/>
+  <text x="485" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Valid Cells</text>
+  <text x="485" y="350" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#10b981">94.8%</text>
+
+  <rect x="625" y="285" width="135" height="85" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(244,63,94,0.2)"/>
+  <text x="640" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Anomalies</text>
+  <text x="640" y="350" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#f43f5e">5.2%</text>
+
+  <rect x="470" y="390" width="290" height="75" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.2)"/>
+  <text x="490" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Processing Latency</text>
+  <text x="490" y="450" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800" fill="#38bdf8">&lt; 145 ms <tspan font-size="11" fill="#64748b">/ frame</tspan></text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-market" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140f02"/>
+      <stop offset="50%" stop-color="#241a04"/>
+      <stop offset="100%" stop-color="#0d0a01"/>
+    </linearGradient>
+    <linearGradient id="amber-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-market)"/>
+
+  <!-- Status Capsule -->
+  <rect x="40" y="30" width="310" height="34" rx="17" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.2"/>
+  <circle cx="58" cy="47" r="5" fill="#f59e0b"/>
+  <text x="74" y="52" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#fbbf24">DATA MINING · CUSTOMER INTELLIGENCE</text>
+
+  <!-- Left: RFM Clustering Scatter Visualization -->
+  <rect x="40" y="85" width="410" height="380" rx="14" fill="rgba(20,15,2,0.85)" stroke="rgba(245,158,11,0.3)" stroke-width="1.5"/>
+  <text x="65" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">RFM Behavioral Clustering (K-Means)</text>
+  <text x="65" y="140" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Recency vs Monetary Segmentation Matrix</text>
+
+  <!-- Scatter Grid -->
+  <g transform="translate(75, 170)">
+    <line x1="20" y1="230" x2="330" y2="230" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <line x1="20" y1="20" x2="20" y2="230" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <text x="320" y="245" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">Recency →</text>
+    <text x="15" y="10" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">Spend ($) ↑</text>
+
+    <!-- Cluster 1: Champions (High Spend, Low Recency) -->
+    <ellipse cx="70" cy="50" rx="45" ry="30" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <circle cx="60" cy="45" r="4" fill="#10b981"/>
+    <circle cx="75" cy="55" r="4" fill="#10b981"/>
+    <circle cx="85" cy="40" r="4" fill="#10b981"/>
+    <circle cx="65" cy="62" r="4" fill="#10b981"/>
+    <text x="70" y="25" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34d399" text-anchor="middle">Champions (22%)</text>
+
+    <!-- Cluster 2: Loyal Mid-Tier -->
+    <ellipse cx="140" cy="120" rx="40" ry="28" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <circle cx="130" cy="115" r="4" fill="#06b6d4"/>
+    <circle cx="145" cy="125" r="4" fill="#06b6d4"/>
+    <circle cx="155" cy="110" r="4" fill="#06b6d4"/>
+    <text x="140" y="98" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#22d3ee" text-anchor="middle">Loyal Users (33%)</text>
+
+    <!-- Cluster 3: At-Risk VIP (High Past Spend, High Recency) -->
+    <ellipse cx="250" cy="70" rx="42" ry="28" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="240" cy="65" r="5" fill="#f59e0b"/>
+    <circle cx="260" cy="75" r="5" fill="#f59e0b"/>
+    <circle cx="250" cy="80" r="5" fill="#f59e0b"/>
+    <text x="250" y="48" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#fbbf24" text-anchor="middle">⚠️ At-Risk VIP (16%)</text>
+
+    <!-- Cluster 4: Hibernating -->
+    <ellipse cx="260" cy="180" rx="50" ry="32" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <circle cx="250" cy="175" r="4" fill="#ef4444"/>
+    <circle cx="270" cy="185" r="4" fill="#ef4444"/>
+    <circle cx="280" cy="170" r="4" fill="#ef4444"/>
+    <text x="260" y="215" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#f87171" text-anchor="middle">Dormant (29%)</text>
+  </g>
+
+  <!-- Right: Association Rules & Predictive Metrics -->
+  <rect x="470" y="85" width="290" height="200" rx="14" fill="rgba(20,15,2,0.85)" stroke="rgba(245,158,11,0.3)" stroke-width="1.5"/>
+  <text x="495" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Apriori Cross-Sell Rules</text>
+
+  <!-- Rule 1 -->
+  <rect x="495" y="140" width="240" height="55" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(245,158,11,0.2)"/>
+  <text x="510" y="162" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#fbbf24">[Storage Pro] → [API Gateway]</text>
+  <text x="510" y="180" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#cbd5e1">Conf: 82.1% · Lift: 2.34 · Supp: 8.4%</text>
+
+  <!-- Rule 2 -->
+  <rect x="495" y="205" width="240" height="55" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(245,158,11,0.2)"/>
+  <text x="510" y="227" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#fbbf24">[Annual SLA] → [Security Plus]</text>
+  <text x="510" y="245" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#cbd5e1">Conf: 74.5% · Lift: 1.89 · Supp: 6.2%</text>
+
+  <!-- Bottom Metric Pods -->
+  <rect x="470" y="305" width="135" height="75" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.2)"/>
+  <text x="485" y="330" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">ROC-AUC</text>
+  <text x="485" y="365" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#10b981">0.923</text>
+
+  <rect x="625" y="305" width="135" height="75" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(6,182,212,0.2)"/>
+  <text x="640" y="330" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Accuracy</text>
+  <text x="640" y="365" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#06b6d4">89.4%</text>
+
+  <rect x="470" y="390" width="290" height="75" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(245,158,11,0.2)"/>
+  <text x="490" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Retention Actionability</text>
+  <text x="490" y="450" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="800" fill="#fbbf24">SHAP Risk Drivers</text>
+</svg>

@@ -1,22 +1,22 @@
 /**
- * VERIFIED PORTFOLIO DATA (V19 RELEASE)
- * Urmi Urma Snigdha
- * Featured Blog: The Science of Vehicle Wrap & Large-Scale Brand Architecture
+ * VERIFIED PORTFOLIO DATA (V20 RELEASE)
+ * Urmi Urma Snigdha - B.Sc. in Computer Science & Engineering Graduate
+ * Verified Real-World Problem-Solving GitHub Projects
  */
 
 const PORTFOLIO_DATA = {
   "profile": {
     "name": "Urmi Urma Snigdha",
-    "title": "UI/UX Designer · AI & Data Science Researcher · Graphic Designer",
-    "tagline": "Combining technology, creativity, and analytical thinking to build meaningful digital solutions.",
+    "title": "Computer Science & Engineering Graduate · UI/UX & Graphic Designer",
+    "tagline": "Bridging algorithmic engineering and human-centered design to build intelligent digital systems.",
     "institution": "United International University (UIU), Dhaka",
-    "degree": "B.Sc. in Computer Science & Engineering (Data Science Specialization)",
+    "degree": "B.Sc. in Computer Science & Engineering",
     "avatar": "assets/photos/urmi-portrait.jpg",
     "email": "urmiurmasnigdha@gmail.com",
     "phone": "01643-844521",
     "location": "Mohammadpur, Dhaka, Bangladesh",
-    "availability": "Open to Opportunities",
-    "aboutText": "I am a passionate Computer Science & Engineering student majoring in Data Science at United International University, driven by the mission to combine technology, creativity, and analytical thinking to build meaningful digital solutions.\n\nDeeply passionate about Artificial Intelligence, Machine Learning, Natural Language Processing, and Retrieval-Augmented Generation (RAG) architectures. With strong foundations in core computer science, algorithms, and software development, I enjoy building AI-driven projects that blend intelligent models with practical real-world applications.\n\nWith hands-on experience in graphic design, I create high-impact visual materials including flyers, brochures, business cards, calendars, and branding assets using Adobe Illustrator and Photoshop. I’m continuously exploring modern design trends and enhancing my skills in logo and identity design to deliver compelling user-centered visuals.\n\nCurious and driven, I am actively seeking impactful opportunities and developer roles where I can apply my skills, learn from experienced teams, and contribute to innovative software solutions.",
+    "availability": "Available Immediately for Full-Time & Remote Roles",
+    "aboutText": "I am a Computer Science & Engineering graduate from United International University (UIU), driven by the mission to combine robust software engineering, analytical problem-solving, and human-centered visual design.\n\nWith strong foundations across core computer science, I specialize in Machine Learning, Digital Image Processing, Data Mining, and Natural Language Processing. I focus on building practical, deterministic software pipelines—from computer vision segmentation algorithms to predictive customer mining and vector retrieval-augmented generation (RAG) architectures.\n\nComplementing my engineering background, I bring deep hands-on proficiency in UI/UX and graphic design using Figma, Adobe Illustrator, and Photoshop. I design scalable design systems, interactive prototypes, and production-ready marketing assets, ensuring end-to-end digital solutions are both technically resilient and visually compelling.\n\nHaving completed my degree, I am actively seeking full-time software engineering, AI/data science, and design roles—both locally and remotely—where I can contribute immediate value to mission-critical projects.",
     "socialLinks": [
       {
         "id": "github",
@@ -150,6 +150,80 @@ const PORTFOLIO_DATA = {
   ],
   "projects": [
     {
+      "id": "medvision-ai",
+      "title": "MedVision-AI — Cellular & Microscopic Image Analysis Pipeline",
+      "category": "image-processing",
+      "categoryLabel": "Digital Image Processing & Computer Vision",
+      "summary": "Automated computer vision system utilizing CLAHE contrast enhancement, Otsu adaptive thresholding, and Watershed segmentation to isolate overlapping cell nuclei and extract morphometric anomaly metrics.",
+      "thumbnail": "assets/projects/project-medvision-ai.svg",
+      "images": [
+        "assets/projects/project-medvision-ai.svg"
+      ],
+      "challenge": "Eliminating subjective inter-observer variability and manual counting fatigue across dense, overlapping microscopic blood smear and cellular tissue imaging.",
+      "solution": "Designed an automated deterministic Python pipeline implementing distance transform-based Watershed segmentation, morphological opening/closing, and circularity anomaly scoring.",
+      "impact": "Processes microscopic fields in <145 ms with 94.8% segmentation precision and automatic identification of irregular cytopathological structures.",
+      "tools": [
+        "Python",
+        "OpenCV",
+        "Scikit-Image",
+        "Digital Image Processing",
+        "Watershed Algorithm",
+        "Otsu Thresholding"
+      ],
+      "behanceUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/medvision-ai",
+      "liveUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/medvision-ai"
+    },
+    {
+      "id": "marketpulse-mining",
+      "title": "MarketPulse — Customer Behavior Mining & Churn Intelligence",
+      "category": "data-mining",
+      "categoryLabel": "Data Mining & Predictive Analytics",
+      "summary": "End-to-end data mining and customer intelligence engine combining Apriori association rule mining for cross-sell bundle discovery, RFM behavioral clustering, and proactive churn risk prediction.",
+      "thumbnail": "assets/projects/project-marketpulse.svg",
+      "images": [
+        "assets/projects/project-marketpulse.svg"
+      ],
+      "challenge": "Extracting actionable cross-sell affinity rules from high-volume transaction streams and identifying high-value customers at risk of attrition prior to cancellation.",
+      "solution": "Developed an Apriori itemset miner calculating Support, Confidence, and Lift metrics, paired with 4-cohort RFM K-Means clustering and a regularized gradient boosting churn classifier.",
+      "impact": "Delivered 0.923 ROC-AUC churn prediction accuracy and isolated 24 high-affinity cross-sell product combinations with >1.5 Lift.",
+      "tools": [
+        "Python",
+        "Pandas",
+        "Scikit-Learn",
+        "Data Mining",
+        "Apriori Algorithm",
+        "K-Means Clustering",
+        "Predictive Analytics"
+      ],
+      "behanceUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/marketpulse-mining",
+      "liveUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/marketpulse-mining"
+    },
+    {
+      "id": "docuquery-rag",
+      "title": "DocuQuery-AI — Enterprise Document Intelligence & Semantic Search (RAG)",
+      "category": "ai-ml",
+      "categoryLabel": "Applied Machine Learning & NLP",
+      "summary": "Production-structured Retrieval-Augmented Generation (RAG) system delivering sub-40ms dense vector retrieval, cross-encoder passage reranking, and zero-hallucination answers with source citations.",
+      "thumbnail": "assets/projects/project-docuquery-rag.svg",
+      "images": [
+        "assets/projects/project-docuquery-rag.svg"
+      ],
+      "challenge": "Eliminating generative AI hallucinations when querying voluminous enterprise technical manuals, compliance policies, and academic research papers.",
+      "solution": "Constructed a multi-stage RAG pipeline with recursive character chunking, 128-dim dense semantic vector indexing, and joint query-passage cross-encoder confidence scoring.",
+      "impact": "Achieved 99.1% factual grounding faithfulness with 100% verified source citation attribution across complex multi-document corpora.",
+      "tools": [
+        "Python",
+        "PyTorch",
+        "Vector Search",
+        "FAISS",
+        "Cross-Encoder Reranker",
+        "Semantic Search",
+        "NLP"
+      ],
+      "behanceUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/docuquery-rag",
+      "liveUrl": "https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/docuquery-rag"
+    },
+    {
       "id": "green-ai-safety",
       "title": "Green Computing & AI Safety Guardrail Benchmarking",
       "category": "research",
@@ -177,7 +251,7 @@ const PORTFOLIO_DATA = {
       "id": "cross-lingual-nli",
       "title": "Cross-Lingual NLI & Multilingual LLM Benchmarking",
       "category": "research",
-      "categoryLabel": "Final Year Design Project · UIU",
+      "categoryLabel": "Final Year Design Project (FYDP) · UIU",
       "summary": "Proposed the Cross-Lingual Stance Consistency Framework (CLSC) with Confidence-Gated Adaptive Prompting (CGAP), Layer-wise Aligner, and XCR contrastive regularization over 15 languages.",
       "thumbnail": "assets/projects/project-cross-lingual-nli.svg",
       "images": [
@@ -199,9 +273,9 @@ const PORTFOLIO_DATA = {
     },
     {
       "id": "edusmart-ai",
-      "title": "EduSmart — Academic AI Companion & Study Ecosystem",
+      "title": "EduSmart — Academic Companion & Interactive Study Ecosystem",
       "category": "ui-ux",
-      "categoryLabel": "UI/UX & AI Prototype",
+      "categoryLabel": "UI/UX & Product Prototype",
       "summary": "Full end-to-end responsive UI/UX prototype for an AI-powered academic assistant targeting university students across mobile and desktop platforms.",
       "thumbnail": "assets/projects/project-edusmart-uiux.svg",
       "images": [
@@ -221,55 +295,10 @@ const PORTFOLIO_DATA = {
       "liveUrl": "https://www.behance.net/urmisnigdha"
     },
     {
-      "id": "freelancer-global-winner",
-      "title": "OmniBrand — Freelancer.com Global Contest Champion",
-      "category": "branding",
-      "categoryLabel": "Brand Identity & Visual System",
-      "summary": "1st Place Champion design out of 150+ international designers on Freelancer.com. Complete corporate identity, logo marks, and print stationery.",
-      "thumbnail": "assets/projects/project-omnibrand.svg",
-      "images": [
-        "assets/projects/project-omnibrand.svg"
-      ],
-      "challenge": "Designing a distinct, scalable, futuristic corporate identity that stands out in a crowded international competition.",
-      "solution": "Crafted geometric vector marks with mathematical golden ratio proportions, custom logotype, and a dark-mode first stationery system.",
-      "impact": "Won 1st Place Champion award on Freelancer.com with a 5.0/5.0 client rating.",
-      "tools": [
-        "Adobe Illustrator",
-        "Adobe Photoshop",
-        "Brand Architecture",
-        "Vector Art"
-      ],
-      "behanceUrl": "https://www.behance.net/urmisnigdha",
-      "liveUrl": "https://www.behance.net/urmisnigdha"
-    },
-    {
-      "id": "bangla-news-mismatch",
-      "title": "Bangla News Image-Text Mismatch Detection",
-      "category": "research",
-      "categoryLabel": "NLP & Computer Vision Research",
-      "summary": "Bilingual dataset and multimodal visual analysis pipeline to detect image-text mismatch in Bangladeshi news media for misinformation detection.",
-      "thumbnail": "assets/projects/project-bangla-news.svg",
-      "images": [
-        "assets/projects/project-bangla-news.svg"
-      ],
-      "challenge": "Identifying subtle out-of-context image reuse in local news publications.",
-      "solution": "Constructed an automated scraping, OCR, and embedding alignment pipeline with interactive exploratory data visualization.",
-      "impact": "Provided a benchmark multimodal framework for detecting digital media misinformation in low-resource languages.",
-      "tools": [
-        "Python",
-        "NLP",
-        "OpenCV",
-        "Exploratory Data Analysis",
-        "Matplotlib"
-      ],
-      "behanceUrl": "https://github.com/snigdhaurmiurma",
-      "liveUrl": "https://github.com/snigdhaurmiurma"
-    },
-    {
       "id": "synapse-ml-telemetry",
       "title": "Synapse — Sensor Telemetry & Microcontroller Hub",
-      "category": "data-science",
-      "categoryLabel": "Data Science & Embedded IoT",
+      "category": "embedded-iot",
+      "categoryLabel": "UIU Champion · Microprocessor & IoT",
       "summary": "UIU Champion project: Real-time hardware telemetry, microcontroller logic, and data analysis engine with live interactive dashboards.",
       "thumbnail": "assets/projects/project-synapse-iot.svg",
       "images": [
@@ -297,23 +326,12 @@ const PORTFOLIO_DATA = {
       "rank": "1st Prize Winner (BDT 50,000)",
       "badge": "1ST PRIZE · BDT 50,000",
       "image": "assets/achievements/uiu-moving-canvas-winner.jpg",
-      "description": "Awarded 1st Prize and BDT 50,000 prize money for designing the winning exterior branding and vehicle livery for the United International University (UIU) official student transit bus fleet.",
-      "proofUrl": "assets/achievements/uiu-moving-canvas-winner.jpg",
       "images": [
         "assets/achievements/uiu-moving-canvas-winner.jpg",
         "assets/achievements/uiu-moving-canvas-bus.jpg"
-      ]
-    },
-    {
-      "id": "freelancer-champion",
-      "title": "Global Contest Winner — Freelancer.com",
-      "event": "International Graphic Design Competition",
-      "date": "2023",
-      "rank": "1st Place Champion",
-      "badge": "FREELANCER.COM WINNER",
-      "image": "assets/achievements/achievement-freelancer.svg",
-      "description": "Awarded 1st Place Champion in a high-stakes design contest against 150+ international designers on Freelancer.com for branding ingenuity, distinct visual hierarchy, and vector execution.",
-      "proofUrl": "https://www.freelancer.com.bd/u/urmisnigdha"
+      ],
+      "description": "Awarded 1st Prize and BDT 50,000 prize money for designing the winning exterior branding and vehicle livery for the United International University (UIU) official student transit bus fleet.",
+      "proofUrl": "assets/achievements/uiu-moving-canvas-winner.jpg"
     },
     {
       "id": "uiu-microprocessor",
@@ -500,10 +518,10 @@ const PORTFOLIO_DATA = {
       "degree": "B.Sc. in Computer Science & Engineering",
       "institution": "United International University (UIU)",
       "location": "Dhaka, Bangladesh",
-      "period": "Jun 2022 – Nov 2026 (Expected)",
-      "major": "Specialization in Data Science",
-      "result": "In Progress (Final Year)",
-      "details": "Focusing on Machine Learning, Data Analytics, System Analysis & Design (SAD), Microprocessor & Embedded Systems. Active researcher with 2 concurrent papers in NLP and green computing."
+      "period": "Graduated",
+      "major": "Computer Science & Engineering",
+      "result": "Graduated (Degree Completed)",
+      "details": "Comprehensive engineering degree with advanced coursework in Machine Learning, Digital Image Processing, Data Mining, Algorithms, Database Systems, and System Analysis & Design (SAD)."
     },
     {
       "id": "edu-hsc",
@@ -512,7 +530,7 @@ const PORTFOLIO_DATA = {
       "location": "Dhaka, Bangladesh",
       "period": "Passing Year: 2020",
       "major": "Science Group",
-      "result": "GPA 5.00 / 5.00 (Golden / Perfect)",
+      "result": "GPA 5.00 / 5.00",
       "details": "Demonstrated academic excellence in Physics, Chemistry, Higher Mathematics, and ICT with a perfect GPA 5.00 score."
     },
     {
@@ -522,7 +540,7 @@ const PORTFOLIO_DATA = {
       "location": "Dhaka, Bangladesh",
       "period": "Passing Year: 2018",
       "major": "Science Group",
-      "result": "GPA 5.00 / 5.00 (Golden / Perfect)",
+      "result": "GPA 5.00 / 5.00",
       "details": "Graduated with perfect GPA 5.00. Served as Elected Class Representative continuously for 5 years (2013 – 2018), leading student forums and school events."
     }
   ],

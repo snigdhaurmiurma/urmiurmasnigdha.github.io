@@ -1,5 +1,5 @@
 # 👩‍💻 Urmi Urma Snigdha
-### **UI/UX Designer · AI & Data Science Researcher · Graphic Designer**
+### **Computer Science & Engineering Graduate · UI/UX & Graphic Designer**
 📍 **Dhaka, Bangladesh** | 🎓 **United International University (UIU)**  
 🌐 **Live Portfolio**: [https://urmisnigdha.vercel.app](https://urmisnigdha.vercel.app) | 📄 **Curriculum Vitae**: [View CV Online](https://urmisnigdha.vercel.app/cv.html)
 
@@ -13,12 +13,12 @@
 
 ## 🌟 Executive Profile & Summary
 
-Passionate **Computer Science & Engineering** student majoring in **Data Science** at **United International University (UIU)**. Bridges human-centered design ergonomics with machine learning and software engineering rigor.
+Computer Science & Engineering graduate from **United International University (UIU)** combining strong engineering discipline with human-centered visual design. Experienced in developing deterministic computer vision segmentation pipelines, customer behavior mining algorithms, and vector RAG architectures, alongside production Figma design systems and Adobe Creative Cloud assets.
 
 - 🥇 **1st Prize Winner (BDT 50,000)** in UIU Moving Canvas Challenge 2026 for designing the official winning university transit bus exterior livery.
-- 🏆 **1st Place Global Champion** on Freelancer.com among 150+ international designers with 5.0/5.0 client rating.
-- 🔬 **AI & NLP Researcher** developing cross-lingual stance consistency (CLSC) frameworks and multilingual LLM prompt projection architectures.
-- 🎨 **Visual Brand Architect & UI/UX Specialist** with extensive client experience delivering design systems, digital interfaces, and marketing publications.
+- 🥇 **Champion (1st Place)** in UIU Microprocessor & Microcontroller Laboratory Showcase for intelligent hardware telemetry automation.
+- 🔬 **AI & Computer Vision Engineer** specializing in Digital Image Processing (OpenCV, Watershed, CLAHE), Data Mining (Apriori, K-Means), and NLP.
+- 🎨 **Visual Brand Architect & UI/UX Specialist** with client experience delivering design systems, digital interfaces, and marketing publications.
 - 🎓 **Academic Track Record**: Verified **GPA 5.00 / 5.00** in both SSC and HSC board examinations.
 
 ---
@@ -27,20 +27,19 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 
 ### **Bachelor of Science in Computer Science & Engineering (CSE)**
 - **Institution**: United International University (UIU), Dhaka, Bangladesh
-- **Major**: Data Science
-- **Timeline**: 2022 – 2026 (Expected)
-- **Focus**: Artificial Intelligence, Machine Learning, Natural Language Processing, Computer Vision, Algorithms & Distributed Systems.
+- **Status**: Graduated (Degree Completed)
+- **Core Coursework**: Machine Learning, Digital Image Processing, Data Mining, Algorithms, Database Systems, Software Engineering, System Analysis & Design (SAD).
 
 ### **Higher Secondary Certificate (HSC)**
 - **Institution**: Govt. Mohammadpur Model School & College, Dhaka
 - **Group**: Science Group
-- **Result**: **GPA 5.00 / 5.00** (Perfect Score)
+- **Result**: **GPA 5.00 / 5.00**
 - **Passing Year**: 2020
 
 ### **Secondary School Certificate (SSC)**
 - **Institution**: Mohammadpur Preparatory School & College, Dhaka
 - **Group**: Science Group
-- **Result**: **GPA 5.00 / 5.00** (Golden / Perfect Score)
+- **Result**: **GPA 5.00 / 5.00**
 - **Leadership**: Served as Elected Class Representative for 5 consecutive years (2013 – 2018).
 
 ---
@@ -50,7 +49,6 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 | Award / Honor | Event & Institution | Achievement |
 | :--- | :--- | :--- |
 | 🥇 **1st Prize Winner (BDT 50,000)** | UIU Moving Canvas Challenge 2026 | Awarded 1st Prize for designing the official winning transit bus exterior livery for UIU |
-| 🥇 **1st Place Global Champion** | International Graphic Design Contest (Freelancer.com) | Won 1st Place against 150+ global designers with 5.0/5.0 client rating |
 | 🥇 **Champion (1st Place)** | Microprocessor & Microcontroller Lab Showcase (UIU) | 1st Place for intelligent IoT hardware telemetry and firmware design |
 | 🥈 **1st Runner-Up** | Electronics Laboratory Showcase (UIU Fall 2024) | Awarded trophy for precision analog/digital circuit prototyping |
 | 🎖️ **5th Runner-Up** | UI Design — System Analysis & Design (UIU SAD 2023) | Ranked top tier for interactive software architecture and UX ergonomics |
@@ -59,55 +57,54 @@ Passionate **Computer Science & Engineering** student majoring in **Data Science
 
 ## 🛠️ Core Competencies & Technical Skills
 
+### 💻 **AI, Data Science & Machine Learning**
+- **Digital Image Processing**: OpenCV, Scikit-Image, CLAHE, Otsu Thresholding, Watershed Segmentation, Morphological Operations, Contour Analysis.
+- **Data Mining & Analytics**: Apriori Algorithm (Market Basket Analysis), RFM Customer Segmentation, K-Means Clustering, LightGBM, Predictive Modeling.
+- **Deep Learning & NLP**: PyTorch, HuggingFace Transformers, RAG Architectures, FAISS, Cross-Encoder Reranking, Word Embeddings (LaBSE, XLM-R).
+- **Data Engineering**: Pandas, NumPy, Matplotlib, Scipy, CodeCarbon (Green AI Emissions Tracking).
+
 ### 🎨 **UI/UX, Product & Graphic Design**
-- **Design Applications**: Adobe Illustrator, Adobe Photoshop, Figma, InDesign, Canva.
+- **Design Applications**: Figma, Adobe Illustrator, Adobe Photoshop, InDesign.
 - **Visual Disciplines**: Design Systems, Auto-Layout, Interactive Prototyping, Wireframing, User Flow Mapping.
 - **Brand Identity**: Corporate Identity, Logo Architecture, Vector Illustration, Color Theory, Typography Systems, Vehicle Fleet Livery.
 - **Print & Publishing**: Brochures, Flyers, Business Cards, Posters, Calendars, Marketing Stationery.
 
-### 💻 **AI, Data Science & Machine Learning**
-- **Deep Learning & Frameworks**: PyTorch, TensorFlow, Scikit-Learn, Keras, HuggingFace Transformers.
-- **Generative AI & LLMs**: RAG Architectures, Vector Databases (Qdrant, Milvus, pgvector), LoRA/QLoRA Fine-Tuning, Prompt Engineering.
-- **Computer Vision & NLP**: OpenCV, YOLOv8/v10, Multilingual Embeddings (LaBSE, XLM-RoBERTa), Image-Text Mismatch Detection.
-- **Data Engineering & Analysis**: Pandas, NumPy, Matplotlib, Seaborn, CodeCarbon (Green AI Emissions Tracking).
-
 ### ⚙️ **Software Engineering & Web Development**
 - **Languages**: Python, C, C++, Java, JavaScript (ES6+), HTML5, CSS3.
-- **Backend & Cloud**: Spring Boot, REST APIs, Microservices, Node.js, Express.
+- **Backend & Cloud**: REST APIs, FastAPI, Spring Boot, Node.js, Express.
 - **Databases & DevOps**: PostgreSQL, MongoDB, Docker, Git, GitHub, Linux, Vercel.
 
 ---
 
-## 🔬 Featured Projects & Research Case Studies
+## 🔬 Featured Real-World GitHub Projects
 
-### 1. **Cross-Lingual NLI & Multilingual LLM Benchmarking (CLSC)**
-- Proposed the *Cross-Lingual Stance Consistency* framework with Confidence-Gated Adaptive Prompting (CGAP) and layer-wise alignment across 15 languages.
-- Implemented with PyTorch, LaBSE, XLM-R, and Llama-3.2 on Kaggle Tesla T4 GPU clusters.
+### 1. **[MedVision-AI — Automated Cellular & Microscopic Image Analysis Pipeline](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/medvision-ai)**
+- **Domain**: Digital Image Processing & Computer Vision (Python, OpenCV, Scikit-Image)
+- **Features**: CLAHE contrast enhancement, Otsu adaptive thresholding, and Watershed segmentation to isolate touching cell nuclei. Computes morphometrics (area, circularity, perimeter) to detect cytopathological anomalies in <145 ms with 94.8% precision.
 
-### 2. **Green Computing & AI Safety Guardrail Benchmarking**
-- Investigating the energy overhead of AI safety guardrails using CodeCarbon and NVML GPU power monitoring across 4 core research hypotheses.
+### 2. **[MarketPulse — Customer Behavior Mining & Churn Intelligence Engine](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/marketpulse-mining)**
+- **Domain**: Data Mining & Predictive Analytics (Python, Pandas, Scikit-Learn)
+- **Features**: Apriori association rule mining discovering high-affinity cross-sell product bundles (Support > 0.06, Lift > 1.5). RFM behavioral clustering (K-Means) and supervised churn risk classification with 0.923 ROC-AUC and 89.4% accuracy.
 
-### 3. **EduSmart — Academic AI Companion & Study Ecosystem**
-- Complete responsive UI/UX prototype and design system in Figma for university students integrating AI tutoring and schedule optimization.
+### 3. **[DocuQuery-AI — Enterprise Document Intelligence & Semantic Search (RAG)](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/docuquery-rag)**
+- **Domain**: Applied Machine Learning & NLP (Python, PyTorch, FAISS, Transformers)
+- **Features**: Sub-40ms dense vector retrieval over enterprise documents, cross-encoder confidence reranking, and zero-hallucination grounded answers with 100% verified source citation attribution.
 
-### 4. **OmniBrand — Freelancer.com Global Champion Identity**
-- 1st Place international winning branding system featuring mathematical golden-ratio vector marks, modern logotypes, and stationery suites.
+### 4. **[Green Computing & AI Safety Guardrail Benchmarking](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io)**
+- **Domain**: Academic Research
+- **Features**: Investigating the runtime energy overhead and carbon footprint of AI safety guardrails using CodeCarbon and NVML GPU power monitoring across 4 research hypotheses.
 
-### 5. **Real-Time Embedded Telemetry Hub (Synapse)**
-- Microcontroller firmware and asynchronous Python telemetry pipeline visualizing sensor streams with live anomaly alerting (UIU Champion Winner).
+### 5. **[Cross-Lingual NLI & Multilingual LLM Benchmarking (CLSC)](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io)**
+- **Domain**: Final Year Design Project (FYDP) · UIU
+- **Features**: Proposed Cross-Lingual Stance Consistency framework with Confidence-Gated Adaptive Prompting (CGAP) and Layer-wise Aligner over 15 languages on Tesla T4 GPUs.
 
-### 6. **Bangla News Image-Text Mismatch Detection**
-- Multimodal research framework combining web scraping, OCR, and embedding alignment to identify out-of-context image reuse in local digital media.
+### 6. **[EduSmart — Academic Companion & Interactive Study Ecosystem](https://www.behance.net/urmisnigdha)**
+- **Domain**: UI/UX & Product Prototype
+- **Features**: End-to-end responsive UI/UX prototype and design system in Figma for university student academic workflows and AI Q&A interaction.
 
----
-
-## 📝 Technical Articles & Research Notes
-
-- 🚌 **[The Science of Vehicle Wrap & Large-Scale Brand Architecture](https://urmisnigdha.vercel.app/blog.html)** — Designing for dynamic 3D physical canvases, anamorphic distortion compensation, CIELAB contrast ratios, and viewing distance DPI mathematics.
-- 🧠 **[Understanding 'Attention Is All You Need'](https://urmisnigdha.vercel.app/blog.html)** — Mathematical and visual deep dive into Scaled Dot-Product Attention, Multi-Head projections, Positional Encodings, and Causal Masking.
-- ⚡ **[Building Production-Grade RAG Systems](https://urmisnigdha.vercel.app/blog.html)** — Semantic chunking, dense + sparse Reciprocal Rank Fusion (RRF), cross-encoder reranking, and hallucination reduction.
-- 🌿 **[Green Computing & AI Safety](https://urmisnigdha.vercel.app/blog.html)** — Benchmarking energy overhead and carbon emissions of runtime LLM guardrails with NVML.
-- 👁️ **[Real-Time Edge Computer Vision with YOLO](https://urmisnigdha.vercel.app/blog.html)** — TensorRT quantization, non-maximum suppression (NMS), and low-latency camera inference.
+### 7. **[Synapse — Real-Time IoT Telemetry & Microcontroller Hub](https://www.behance.net/urmisnigdha)**
+- **Domain**: UIU Champion Winner · Microprocessor & IoT
+- **Features**: Microcontroller firmware and asynchronous Python telemetry pipeline visualizing sensor streams with live anomaly alerting.
 
 ---
 
