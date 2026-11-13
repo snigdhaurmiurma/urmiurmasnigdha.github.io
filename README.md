@@ -78,7 +78,11 @@ Computer Science & Engineering graduate from **United International University (
 
 ## 🔬 Featured Real-World GitHub Projects
 
-### 1. **[MedVision-AI — Automated Cellular & Microscopic Image Analysis Pipeline](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/medvision-ai)**
+### 1. **[FundBridge — Distributed Micro-Finance & Anti-Predatory Lending Engine](https://github.com/snigdhaurmiurma/fundbridge)**
+- **Domain**: FinTech Software Engineering & Cryptographic Security (React, Node.js, Express, SQLite WAL)
+- **Features**: Automated loan underwriting with anti-predatory APR caps, double-entry immutable ledger accounting, AES-256-GCM encrypted KYC/NID vault, and SHA-256 tamper-evident cryptographic block audit chain with zero mathematical reconciliation drift.
+
+### 2. **[MedVision-AI — Automated Cellular & Microscopic Image Analysis Pipeline](https://github.com/snigdhaurmiurma/urmiurmasnigdha.github.io/tree/main/projects/medvision-ai)**
 - **Domain**: Digital Image Processing & Computer Vision (Python, OpenCV, Scikit-Image)
 - **Features**: CLAHE contrast enhancement, Otsu adaptive thresholding, and Watershed segmentation to isolate touching cell nuclei. Computes morphometrics (area, circularity, perimeter) to detect cytopathological anomalies in <145 ms with 94.8% precision.
 

@@ -106,12 +106,27 @@
       '<div style="display:flex;gap:0.45rem;flex-wrap:wrap;">' + toolsHtml + '</div>' +
       '</div>' +
 
+      '<div id="modal-interactive-demo-slot" style="margin-bottom:2rem;"></div>' +
+
       '<div style="display:flex;gap:1rem;flex-wrap:wrap;">' +
       (project.behanceUrl ? '<a href="' + project.behanceUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-gradient"><span>Explore on External Link</span> &#8599;</a>' : '') +
       '<button class="btn btn-secondary" onclick="window.PORTFOLIO_LIGHTBOX.closeModal()">Close</button>' +
       '</div>';
 
     openModal(html);
+
+    // Initialize Interactive Workable Demo if available
+    if (window.PORTFOLIO_DEMOS) {
+      if (projectId === 'medvision-ai') {
+        window.PORTFOLIO_DEMOS.initMedVisionDemo('modal-interactive-demo-slot');
+      } else if (projectId === 'fundbridge') {
+        window.PORTFOLIO_DEMOS.initFundBridgeDemo('modal-interactive-demo-slot');
+      } else if (projectId === 'marketpulse-mining') {
+        window.PORTFOLIO_DEMOS.initMarketPulseDemo('modal-interactive-demo-slot');
+      } else if (projectId === 'docuquery-rag') {
+        window.PORTFOLIO_DEMOS.initDocuQueryDemo('modal-interactive-demo-slot');
+      }
+    }
 
     if (images.length > 1) {
       var prevBtn = document.getElementById('prev-slide-btn');

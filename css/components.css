@@ -291,7 +291,7 @@ html.light .theme-toggle-btn {
 
 /* ULTRA-READABLE MODERN TYPOGRAPHY FOR URMI URMA SNIGDHA */
 .hero-name-big {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-display) !important;
   font-size: clamp(2.75rem, 6.5vw, 4.5rem);
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
@@ -1223,3 +1223,153 @@ html.light .form-input {
 .btn-gradient {
   min-height: 46px;
 }
+
+/* ==========================================================================
+   AMBIENT HERO CANVAS & INTRO VIDEO SHOWREEL
+   ========================================================================== */
+.hero-canvas-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#hero-ambient-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.intro-showreel-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  max-width: 980px;
+  width: 95%;
+  margin: 2rem auto;
+  box-shadow: var(--shadow-card), 0 0 50px rgba(6, 182, 212, 0.35);
+  backdrop-filter: blur(25px);
+  position: relative;
+  z-index: 10001;
+}
+
+.intro-showreel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   LIVE INTERACTIVE LABS (WORKABLE BROWSER DEMOS)
+   ========================================================================== */
+.live-labs-section {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+.live-labs-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  backdrop-filter: blur(15px);
+}
+
+.live-labs-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  justify-content: center;
+}
+
+.live-labs-tab-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+html.light .live-labs-tab-btn {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.live-labs-tab-btn:hover {
+  color: var(--text-highlight);
+  background: rgba(6, 182, 212, 0.12);
+  border-color: var(--accent-cyan);
+}
+
+.live-labs-tab-btn.active {
+  background: var(--gradient-brand);
+  color: #ffffff !important;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+}
+
+.interactive-demo-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+html.light .interactive-demo-card {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.demo-header {
+  margin-bottom: 1.25rem;
+}
+
+.demo-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+.demo-btn {
+  font-size: 0.8rem !important;
+  padding: 0.4rem 0.85rem !important;
+}
+
+.demo-btn.active {
+  background: var(--gradient-brand) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* ==========================================================================
+   GIGA DIGITAL AGENCY SPRING TRANSITIONS & 3D TILT
+   ========================================================================== */
+.project-card, .blog-item-card, .skills-col-card, .achievement-card {
+  transform-style: preserve-3d;
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.26s ease;
+  will-change: transform;
+}
+
+.project-card:hover, .blog-item-card:hover, .achievement-card:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 35px rgba(6, 182, 212, 0.22);
+}
+

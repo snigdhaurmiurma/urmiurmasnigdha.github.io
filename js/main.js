@@ -26,6 +26,8 @@
     initDhakaClock();
     initScrollSpy();
     initVisitorTracker();
+    initLiveLabs();
+    init3DCardTilt();
     initGlobalModalDelegation();
   }
 
@@ -175,20 +177,28 @@
         return '<span class="project-tool-tag">' + t + '</span>';
       }).join('');
 
+      var imgHtml = p.thumbnail ?
+        '<div style="width:100%;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;margin-bottom:1rem;background:#030712;border:1px solid var(--border-subtle);">' +
+          '<img src="' + p.thumbnail + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />' +
+        '</div>' : '';
+
       return '<div class="project-card" data-project-id="' + p.id + '">' +
+        imgHtml +
         '<div class="project-card-top">' +
           '<span class="project-cat-badge">' + p.categoryLabel + '</span>' +
-          '<span style="font-size:0.8rem;font-weight:700;color:var(--accent-cyan);">Case Study &#8599;</span>' +
+          '<span style="font-size:0.8rem;font-weight:700;color:var(--accent-cyan);">Interactive Demo &#8599;</span>' +
         '</div>' +
         '<h3 class="project-title">' + p.title + '</h3>' +
         '<p class="project-desc">' + p.summary + '</p>' +
         '<div class="project-tools-row">' + toolsHtml + '</div>' +
         '<div class="project-card-footer">' +
-          '<span>View Interactive Breakdown &#8594;</span>' +
+          '<span>Launch Interactive Demo &#8594;</span>' +
           '<span style="font-size:0.75rem;color:var(--text-dim);">Live Project</span>' +
         '</div>' +
       '</div>';
     }).join('');
+
+    init3DCardTilt();
   }
 
   // 6. Render Achievements
@@ -386,6 +396,59 @@
         '<div style="font-size:0.8rem;font-weight:600;color:var(--accent-cyan);padding-top:0.75rem;border-top:1px solid var(--border-subtle);">Explore Discipline &#8594;</div>' +
       '</div>';
     }).join('');
+  }
+
+  // 9B. Live Interactive Labs Engine
+  function initLiveLabs() {
+    var mount = document.getElementById('interactive-labs-mount');
+    var tabs = document.querySelectorAll('.live-labs-tab-btn');
+    if (!mount || !tabs.length) return;
+
+    function loadTab(tabKey) {
+      if (!window.PORTFOLIO_DEMOS) return;
+      if (tabKey === 'fundbridge') {
+        window.PORTFOLIO_DEMOS.initFundBridgeDemo('interactive-labs-mount');
+      } else if (tabKey === 'medvision') {
+        window.PORTFOLIO_DEMOS.initMedVisionDemo('interactive-labs-mount');
+      } else if (tabKey === 'marketpulse') {
+        window.PORTFOLIO_DEMOS.initMarketPulseDemo('interactive-labs-mount');
+      } else if (tabKey === 'docuquery') {
+        window.PORTFOLIO_DEMOS.initDocuQueryDemo('interactive-labs-mount');
+      }
+    }
+
+    tabs.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        tabs.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var tabKey = btn.getAttribute('data-tab');
+        loadTab(tabKey);
+      });
+    });
+
+    // Default load fundbridge
+    loadTab('fundbridge');
+  }
+
+  // 9C. Giga-style 3D Tilt Transitions
+  function init3DCardTilt() {
+    var cards = document.querySelectorAll('.project-card, .blog-item-card, .skills-col-card, .achievement-card');
+    cards.forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var rotateX = ((y - centerY) / centerY) * -5;
+        var rotateY = ((x - centerX) / centerX) * 5;
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-4px)';
+      });
+
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      });
+    });
   }
 
   // 10. Universal Global Event Delegation (Guaranteeing every modal ALWAYS opens)

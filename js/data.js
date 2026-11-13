@@ -128,27 +128,57 @@ const PORTFOLIO_DATA = {
       "name": "All Works"
     },
     {
-      "id": "ui-ux",
-      "name": "UI/UX & AI Product"
+      "id": "software",
+      "name": "FinTech & Software"
     },
     {
-      "id": "research",
-      "name": "AI Research & NLP"
+      "id": "image-processing",
+      "name": "Computer Vision"
+    },
+    {
+      "id": "data-mining",
+      "name": "Data Mining"
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI & NLP"
+    },
+    {
+      "id": "ui-ux",
+      "name": "UI/UX & Product"
     },
     {
       "id": "branding",
-      "name": "Branding & Identity"
-    },
-    {
-      "id": "graphic",
-      "name": "Graphic Design"
-    },
-    {
-      "id": "data-science",
-      "name": "Data & IoT"
+      "name": "Branding & Livery"
     }
   ],
   "projects": [
+    {
+      "id": "fundbridge",
+      "title": "FundBridge — Distributed Micro-Finance & Anti-Predatory Lending Engine",
+      "category": "software",
+      "categoryLabel": "FinTech Engineering & Cryptographic Security",
+      "summary": "Full-stack micro-finance platform featuring automated loan underwriting with anti-predatory APR caps, dual-entry immutable ledger accounting, AES-256-GCM encrypted KYC/NID vault, and SHA-256 tamper-evident cryptographic block audit chain.",
+      "thumbnail": "assets/projects/project-fundbridge.svg",
+      "images": [
+        "assets/projects/project-fundbridge.svg"
+      ],
+      "challenge": "Preventing predatory APR inflation, mitigating ledger double-spending risks, and securing sensitive national identity (NID/KYC) credentials against exfiltration in distributed community micro-lending ecosystems.",
+      "solution": "Architected a dual-entry financial accounting ledger with strict debit-credit invariant balancing, AES-256-GCM field-level encryption with authenticated Galois tags, automated amortization schedules capped at fair APRs, and an immutable SHA-256 block hash chain for tamper audit trails.",
+      "impact": "Eliminates ledger drift with 100% mathematical reconciliation, guarantees sub-50ms cryptographic audit verification, and safeguards borrower identities under zero-trust principles.",
+      "tools": [
+        "React",
+        "Node.js",
+        "Express",
+        "SQLite (WAL Mode)",
+        "AES-256-GCM",
+        "SHA-256 Hash Chain",
+        "Double-Entry Ledger",
+        "FinTech Security"
+      ],
+      "behanceUrl": "https://github.com/snigdhaurmiurma/fundbridge",
+      "liveUrl": "https://github.com/snigdhaurmiurma/fundbridge"
+    },
     {
       "id": "medvision-ai",
       "title": "MedVision-AI — Cellular & Microscopic Image Analysis Pipeline",

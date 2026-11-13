@@ -21,10 +21,10 @@
       })();
     </script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Humanist AI Modern Stack (Space Grotesk, Lexend Deca, Plus Jakarta Sans, JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Lexend+Deca:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -78,6 +78,7 @@
           <li><a href="#about" class="nav-item-link">About</a></li>
           <li><a href="#skills" class="nav-item-link">Skills</a></li>
           <li><a href="#projects" class="nav-item-link">Projects</a></li>
+          <li><a href="#live-labs" class="nav-item-link" style="color:var(--accent-cyan);font-weight:700;">Live Labs</a></li>
           <li><a href="#achievements" class="nav-item-link">Awards</a></li>
           <li><a href="#education" class="nav-item-link">Education</a></li>
           <li><a href="#blog" class="nav-item-link">Blog</a></li>
@@ -107,6 +108,7 @@
           <a href="#about" class="mobile-link">About</a>
           <a href="#skills" class="mobile-link">Skills</a>
           <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#live-labs" class="mobile-link" style="color:var(--accent-cyan);font-weight:700;">🔬 Live Labs &amp; Demos</a>
           <a href="#achievements" class="mobile-link">Awards</a>
           <a href="#education" class="mobile-link">Education</a>
           <a href="cv.html" class="mobile-link" style="color:var(--accent-cyan);font-weight:700;">📄 View &amp; Download CV</a>
@@ -120,6 +122,11 @@
     <main>
       <!-- 1. CENTERED HERO SECTION -->
       <section id="hero" class="hero-centered-section">
+        <!-- Interactive Ambient Neural Mesh Backdrop Canvas -->
+        <div class="hero-canvas-backdrop">
+          <canvas id="hero-ambient-canvas"></canvas>
+        </div>
+
         <div class="container">
           <div class="hero-centered-container">
             <!-- Avatar with Gradient Ring -->
@@ -152,11 +159,14 @@
               Computer Science &amp; Engineering graduate from United International University (UIU). Engineering robust Machine Learning, Digital Image Processing, and Data Mining pipelines alongside production-grade UI/UX design systems.
             </p>
 
-            <!-- Action Buttons with Direct Download CV Link -->
+            <!-- Action Buttons with Direct Download CV Link & Intro Video -->
             <div class="hero-centered-actions">
               <a href="#projects" class="btn btn-gradient">
                 <span>Explore Selected Works</span> &#8595;
               </a>
+              <button id="open-intro-video-btn" class="btn btn-secondary" title="Watch 60-Second Video Showreel">
+                <span style="color:var(--accent-cyan);font-weight:700;">🎬 Watch 60s Intro</span>
+              </button>
               <a href="cv.html?download=true" class="btn btn-secondary" title="Download Official PDF CV">
                 <span>📥 Download CV (PDF)</span> &#8599;
               </a>
@@ -277,6 +287,30 @@
             <a href="https://www.behance.net/urmisnigdha/projects" target="_blank" rel="noopener noreferrer" class="btn btn-gradient" style="font-size:1.05rem;padding:0.9rem 2.2rem;">
               <span>🎨 Explore All 20+ Works on Behance</span> &#8599;
             </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4B. LIVE INTERACTIVE LABS (FULLY WORKABLE IN-BROWSER DEMOS) -->
+      <section id="live-labs" class="live-labs-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">LIVE INTERACTIVE LABS</span>
+            <h2 class="section-title">Test My Engineering Projects in Real-Time</h2>
+            <p class="section-subtitle">Fully functional, deterministic in-browser simulations running FinTech encryption vaults, computer vision pipelines, and vector RAG search.</p>
+          </div>
+
+          <div class="live-labs-container">
+            <!-- Demo Select Tabs -->
+            <div class="live-labs-tabs">
+              <button class="live-labs-tab-btn active" data-tab="fundbridge">🏦 FundBridge FinTech Simulator</button>
+              <button class="live-labs-tab-btn" data-tab="medvision">🔬 MedVision-AI Vision Lab</button>
+              <button class="live-labs-tab-btn" data-tab="marketpulse">📊 MarketPulse Churn Miner</button>
+              <button class="live-labs-tab-btn" data-tab="docuquery">🧠 DocuQuery Semantic RAG</button>
+            </div>
+
+            <!-- Mount Container for Live Demo -->
+            <div id="interactive-labs-mount"></div>
           </div>
         </div>
       </section>
@@ -510,6 +544,8 @@
 
     <!-- Universal Scripts -->
     <script src="js/data.js"></script>
+    <script src="js/interactive-demos.js"></script>
+    <script src="js/hero-canvas.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
   </body>

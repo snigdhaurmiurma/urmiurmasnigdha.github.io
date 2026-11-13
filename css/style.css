@@ -40,8 +40,9 @@
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.6);
   --shadow-glow: 0 0 35px rgba(6, 182, 212, 0.22);
 
-  /* Typography */
-  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography - Humanist AI Modern Aesthetic */
+  --font-display: 'Space Grotesk', 'Lexend Deca', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', 'Lexend Deca', sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
